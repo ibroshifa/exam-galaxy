@@ -3,8 +3,8 @@ import { Inter, Space_Grotesk } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
-const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
-const spaceGrotesk = Space_Grotesk({ subsets: ['latin'], variable: '--font-space' })
+// const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
+// const spaceGrotesk = Space_Grotesk({ subsets: ['latin'], variable: '--font-space' })
 
 export const viewport: Viewport = {
   width: 'device-width',
@@ -116,7 +116,8 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`${inter.variable} ${spaceGrotesk.variable} font-sans antialiased`}>
+      {/* <body className={`${inter.variable} ${spaceGrotesk.variable} font-sans antialiased`}> */}
+      <body className={`font-sans antialiased`}>
         {children}
         <Analytics />
       </body>
