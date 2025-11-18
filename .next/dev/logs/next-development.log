@@ -1,0 +1,36 @@
+[00:00:00.844] Server  WARN     ⚠ Minimum recommended TypeScript version is v5.1.0, older versions can potentially be incompatible with Next.js. Detected: 5.0.2
+[00:00:01.173] Server  LOG      ✓ Ready in 850ms
+[00:00:06.557] Server  LOG      ○ Compiling / ...
+[00:00:21.454] Browser WARN    Image with src "/ethiopian-student-studying-with-practice-questions.jpg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:00:25.738] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:00:25.739] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:00:25.739] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763453931531}
+[00:02:07.822] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/grade-9-textbooks color: rgb(120, 120, 120) color: inherit {"dp":"/grade-9-textbooks","o":"http://localhost:3000/grade-9-textbooks","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763454033597}
+[00:02:38.498] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763454064287}
+[00:04:25.772] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/grade-9-textbooks color: rgb(120, 120, 120) color: inherit {"dp":"/grade-9-textbooks","o":"http://localhost:3000/grade-9-textbooks","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763454171557}
+[00:04:30.650] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/books/grade-9-physics color: rgb(120, 120, 120) color: inherit {"dp":"/books/grade-9-physics","o":"http://localhost:3000/books/grade-9-physics","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763454176438}
+[00:06:46.441] Server  LOG      ✓ Compiled in 256ms
+[00:06:49.124] Server  LOG      ✓ Compiled in 208ms
+[00:06:51.223] Server  LOG      ✓ Compiled in 131ms
+[00:07:01.263] Server  LOG      ✓ Compiled in 178ms
+[00:07:15.662] Server  LOG      ✓ Compiled in 588ms
+[00:07:17.953] Server  LOG      ✓ Compiled in 69ms
+[00:07:19.934] Server  LOG      ✓ Compiled in 71ms
+[00:07:32.884] Server  LOG      ✓ Compiled in 113ms
+[00:07:38.056] Server  LOG      ✓ Compiled in 141ms
+[00:07:46.698] Server  LOG      ✓ Compiled in 71ms
+[00:08:13.242] Server  LOG      ✓ Compiled in 126ms
+[00:08:17.831] Server  LOG      ✓ Compiled in 101ms
+[00:08:25.138] Server  LOG      ✓ Compiled in 56ms
+[00:08:34.996] Server  LOG      ✓ Compiled in 172ms
+[00:08:41.739] Server  LOG      ✓ Compiled in 102ms
+[00:09:01.090] Server  LOG      ✓ Compiled in 200ms
+[00:09:04.131] Server  LOG      ✓ Compiled in 90ms
+[00:09:24.509] Server  LOG      ✓ Compiled in 76ms
+[00:09:58.312] Server  LOG      ✓ Compiled in 105ms
+[00:10:10.535] Server  LOG      ✓ Compiled in 75ms
+[00:10:28.918] Server  LOG      ✓ Compiled in 166ms
+[00:10:32.812] Server  LOG      ✓ Compiled in 171ms
+[00:14:20.207] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763454765986}
+[00:17:13.918] Server  LOG      ✓ Compiled in 1084ms

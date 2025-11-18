@@ -119,17 +119,11 @@ export default function RootLayout({
           }}
         />
       </head>
-
-      {/* <body className={`${inter.variable} ${spaceGrotesk.variable} font-sans antialiased`}> */}
-      <body className={`font-sans antialiased`}>
-        {children}
-=======
       <body className={`${inter.variable} ${spaceGrotesk.variable} font-sans antialiased`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Header />
           {children}
         </ThemeProvider>
-
         <Analytics />
       </body>
     </html>
