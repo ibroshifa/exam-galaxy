@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/HP/Desktop/web%20projects/exam%20buddy/exam-galaxy/app/books/layout.tsx"],"sourcesContent":["import { Metadata } from 'next'\r\n\r\nexport const metadata: Metadata = {\r\n  title: {\r\n    template: '%s | Exam Galaxy Textbooks',\r\n    default: 'Download Exam Galaxy Textbooks',\r\n  },\r\n  description: 'Download free Ethiopian textbooks for all grades. High-quality PDFs for EuEE exam preparation with Exam Galaxy.',\r\n  robots: {\r\n    index: true,\r\n    follow: true,\r\n  },\r\n}\r\n\r\nexport default function BooksLayout({\r\n  children,\r\n}: {\r\n  children: React.ReactNode\r\n}) {\r\n  return children\r\n}\r\n"],"names":[],"mappings":";;;;;;AAEO,MAAM,WAAqB;IAChC,OAAO;QACL,UAAU;QACV,SAAS;IACX;IACA,aAAa;IACb,QAAQ;QACN,OAAO;QACP,QAAQ;IACV;AACF;AAEe,SAAS,YAAY,EAClC,QAAQ,EAGT;IACC,OAAO;AACT"}}]
-}
