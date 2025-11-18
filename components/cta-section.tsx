@@ -41,22 +41,22 @@ export function CTASection() {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">
-            Ready to Ace Your EuEE Exam?
+            Start Your EUEE Preparation with Exam Galaxy
           </h2>
           <p className="text-xl text-emerald-50 mb-8 leading-relaxed max-w-2xl mx-auto">
-            Join thousands of Ethiopian students who are preparing smarter with our comprehensive study materials and practice questions
+            Download the Exam Galaxy app to access 1000+ past exam questions from 2007-2017. Practice with real EUEE questions and download free textbooks from this website.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <Button size="lg" className="gap-2 bg-white text-emerald-700 hover:bg-emerald-50" asChild>
               <a href="https://play.google.com/store" target="_blank" rel="noopener noreferrer">
                 <Download className="h-5 w-5" />
-                Download on Play Store
+                Download Exam Galaxy App
               </a>
             </Button>
             <Button size="lg" variant="outline" className="gap-2 border-2 border-white text-white hover:bg-white/10" asChild>
               <a href="#textbooks">
-                Browse Textbooks
+                Browse Free Textbooks
               </a>
             </Button>
           </div>

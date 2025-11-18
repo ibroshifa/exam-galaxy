@@ -12,10 +12,10 @@ export function Footer() {
           <div>
             <div className="flex items-center gap-2 mb-4">
               <BookOpen className="h-6 w-6 text-emerald-600" />
-              <span className="text-xl font-bold">EthioTextbooks</span>
+              <span className="text-xl font-bold">Exam Galaxy</span>
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Empowering Ethiopian students with free access to quality educational resources for EuEE preparation.
+              Ethiopian University Entrance Exam (EuEE) preparation app with 1000+ past questions (2007-2017). Free textbooks for grades 9-12 available on our website.
             </p>
           </div>
 
@@ -51,27 +51,27 @@ export function Footer() {
             <h3 className="font-semibold mb-4">Subjects</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/subjects/physics" className="text-muted-foreground hover:text-emerald-600 transition-colors">
+                <Link href="/grade-9-textbooks" className="text-muted-foreground hover:text-emerald-600 transition-colors">
                   Physics
                 </Link>
               </li>
               <li>
-                <Link href="/subjects/chemistry" className="text-muted-foreground hover:text-emerald-600 transition-colors">
+                <Link href="/grade-9-textbooks" className="text-muted-foreground hover:text-emerald-600 transition-colors">
                   Chemistry
                 </Link>
               </li>
               <li>
-                <Link href="/subjects/biology" className="text-muted-foreground hover:text-emerald-600 transition-colors">
+                <Link href="/grade-9-textbooks" className="text-muted-foreground hover:text-emerald-600 transition-colors">
                   Biology
                 </Link>
               </li>
               <li>
-                <Link href="/subjects/mathematics" className="text-muted-foreground hover:text-emerald-600 transition-colors">
+                <Link href="/grade-9-textbooks" className="text-muted-foreground hover:text-emerald-600 transition-colors">
                   Mathematics
                 </Link>
               </li>
               <li>
-                <Link href="/subjects/english" className="text-muted-foreground hover:text-emerald-600 transition-colors">
+                <Link href="/grade-9-textbooks" className="text-muted-foreground hover:text-emerald-600 transition-colors">
                   English
                 </Link>
               </li>
@@ -94,14 +94,14 @@ export function Footer() {
                 <Instagram className="h-5 w-5" />
                 <span className="sr-only">Instagram</span>
               </a>
-              <a href="mailto:contact@ethiotextbooks.com" className="text-muted-foreground hover:text-emerald-600 transition-colors">
+              <a href="mailto:contact@examgalaxy.com" className="text-muted-foreground hover:text-emerald-600 transition-colors">
                 <Mail className="h-5 w-5" />
                 <span className="sr-only">Email</span>
               </a>
             </div>
             <p className="text-sm text-muted-foreground">
-              <a href="mailto:contact@ethiotextbooks.com" className="hover:text-emerald-600">
-                contact@ethiotextbooks.com
+              <a href="mailto:contact@examgalaxy.com" className="hover:text-emerald-600">
+                contact@examgalaxy.com
               </a>
             </p>
           </div>
@@ -109,7 +109,7 @@ export function Footer() {
 
         <div className="mt-8 pt-8 border-t">
           <p className="text-center text-sm text-muted-foreground">
-            © {currentYear} EthioTextbooks. All rights reserved. Helping Ethiopian students succeed.
+            © {currentYear} Exam Galaxy. All rights reserved. Helping Ethiopian students ace their entrance exam.
           </p>
         </div>
       </div>

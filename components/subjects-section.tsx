@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { Card, CardContent } from '@/components/ui/card'
-import { Atom, Beaker, Dna, Calculator, BookA, Target } from 'lucide-react'
+import { Atom, Beaker, Dna, Calculator, BookA, Globe, Map, TrendingUp, GraduationCap } from 'lucide-react'
 
 const subjects = [
   {
@@ -27,6 +27,27 @@ const subjects = [
     iconColor: 'text-emerald-600',
   },
   {
+    name: 'History',
+    icon: GraduationCap,
+    description: 'Ethiopian History, World History & Modern Developments',
+    color: 'from-amber-500 to-orange-500',
+    iconColor: 'text-amber-600',
+  },
+  {
+    name: 'Geography',
+    icon: Map,
+    description: 'Physical Geography, Human Geography & Global Systems',
+    color: 'from-teal-500 to-cyan-500',
+    iconColor: 'text-teal-600',
+  },
+  {
+    name: 'Economics',
+    icon: TrendingUp,
+    description: 'Microeconomics, Macroeconomics & Development Economics',
+    color: 'from-green-600 to-emerald-600',
+    iconColor: 'text-green-700',
+  },
+  {
     name: 'Mathematics',
     icon: Calculator,
     description: 'Algebra, Calculus, Geometry & Statistics',
@@ -42,7 +63,7 @@ const subjects = [
   },
   {
     name: 'SAT',
-    icon: Target,
+    icon: BookA,
     description: 'SAT Math, Reading & Writing Preparation',
     color: 'from-red-500 to-rose-500',
     iconColor: 'text-red-600',
@@ -51,7 +72,7 @@ const subjects = [
 
 export function SubjectsSection() {
   return (
-    <section className="px-4 py-16 sm:px-6 lg:px-8 lg:py-24 bg-muted/30">
+    <section id="features" className="px-4 py-16 sm:px-6 lg:px-8 lg:py-24 bg-muted/30">
       <div className="mx-auto max-w-7xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -61,7 +82,7 @@ export function SubjectsSection() {
           className="text-center mb-12"
         >
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">
-            Supported <span className="text-emerald-600">Subjects</span>
+            Supported <span className="text-primary">Subjects</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             Master all core subjects required for the Ethiopian University Entrance Examination
@@ -75,10 +96,10 @@ export function SubjectsSection() {
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              transition={{ duration: 0.5, delay: index * 0.08 }}
               whileHover={{ y: -8 }}
             >
-              <Card className="h-full border-2 hover:border-emerald-200 transition-all overflow-hidden group">
+              <Card className="h-full border-2 hover:border-primary/30 transition-all overflow-hidden group dark:hover:border-primary/40">
                 <CardContent className="p-6 relative">
                   {/* Animated gradient background */}
                   <motion.div

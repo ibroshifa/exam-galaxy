@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { Button } from '@/components/ui/button'
-import { Download, BookOpen, GraduationCap } from 'lucide-react'
+import { Download, BookOpen, Zap } from 'lucide-react'
 import Image from 'next/image'
 
 export function HeroSection() {
@@ -49,8 +49,8 @@ export function HeroSection() {
               transition={{ delay: 0.2 }}
               className="mb-4 inline-flex items-center gap-2 rounded-full bg-emerald-100 px-4 py-2 text-sm font-medium text-emerald-800"
             >
-              <GraduationCap className="h-4 w-4" />
-              <span>Trusted by 50,000+ Students</span>
+              <Zap className="h-4 w-4" />
+              <span>2007-2017 EuEE Question Bank</span>
             </motion.div>
 
             <motion.h1
@@ -59,7 +59,7 @@ export function HeroSection() {
               transition={{ delay: 0.3 }}
               className="mb-6 text-4xl font-bold leading-tight tracking-tight text-foreground sm:text-5xl lg:text-6xl text-balance"
             >
-              Ace Your <span className="text-emerald-600">EuEE Exam</span> with Free Textbooks
+              Ace the <span className="text-emerald-600">Ethiopian University Entrance Exam</span>
             </motion.h1>
 
             <motion.p
@@ -68,7 +68,7 @@ export function HeroSection() {
               transition={{ delay: 0.4 }}
               className="mb-8 text-lg text-muted-foreground leading-relaxed text-pretty"
             >
-              Download free Ethiopian textbooks for grades 9-12. Access comprehensive study materials for Physics, Chemistry, Biology, Mathematics, English, and SAT preparation.
+              Download Exam Galaxy to access complete Ethiopian University Entrance Exam (EuEE) question bank from 2007-2017. Get free textbooks for grades 9-12 and study materials designed to help you excel.
             </motion.p>
 
             <motion.div
@@ -80,13 +80,13 @@ export function HeroSection() {
               <Button size="lg" className="gap-2 bg-emerald-600 hover:bg-emerald-700 text-white" asChild>
                 <a href="https://play.google.com/store" target="_blank" rel="noopener noreferrer">
                   <Download className="h-5 w-5" />
-                  Download App
+                  Download Exam Galaxy App
                 </a>
               </Button>
               <Button size="lg" variant="outline" className="gap-2 border-2" asChild>
                 <a href="#textbooks">
                   <BookOpen className="h-5 w-5" />
-                  Browse Textbooks
+                  Browse Free Textbooks
                 </a>
               </Button>
             </motion.div>
@@ -99,20 +99,20 @@ export function HeroSection() {
             >
               <div className="flex items-center gap-2">
                 <div className="h-2 w-2 rounded-full bg-emerald-500" />
-                <span>100% Free</span>
+                <span>1000+ Questions</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="h-2 w-2 rounded-full bg-yellow-500" />
-                <span>All Grades</span>
+                <span>Free Access</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="h-2 w-2 rounded-full bg-red-500" />
-                <span>Official Curriculum</span>
+                <span>All Subjects</span>
               </div>
             </motion.div>
           </motion.div>
 
-          {/* Right content - App Screenshots */}
+          {/* Right content - App Screenshot */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
@@ -133,8 +133,8 @@ export function HeroSection() {
               >
                 <div className="relative aspect-[9/19] w-full overflow-hidden rounded-3xl border-8 border-gray-800 bg-white shadow-2xl">
                   <Image
-                    src="/ethiopian-education-app-mobile-screenshot-with-tex.jpg"
-                    alt="EuEE Exam Preparation App Screenshot"
+                    src="/exam-galaxy-app-euee-questions-interface.jpg"
+                    alt="Exam Galaxy App - EuEE Questions"
                     fill
                     className="object-cover"
                     priority
