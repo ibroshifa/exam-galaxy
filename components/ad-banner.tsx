@@ -34,7 +34,7 @@ export function AdBanner({ variant = 'inline' }: AdBannerProps) {
             <h3 className="font-display font-bold text-lg mb-1">Prepare with Exam Galaxy</h3>
             <p className="text-sm mb-3">Master EuEE with interactive practice tests and expert-curated content.</p>
             <a
-              href="https://play.google.com/store/apps/details?id=com.examgalaxy"
+              href="https://play.google.com/store/apps/details?id=com.appysinia.exam_galaxy&pcampaignid=web_share"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block rounded-lg bg-primary-foreground px-4 py-2 text-sm font-semibold text-primary hover:opacity-90 transition"
@@ -63,7 +63,7 @@ export function AdBanner({ variant = 'inline' }: AdBannerProps) {
         <h3 className="font-display font-bold mb-2">Download Exam Galaxy App</h3>
         <p className="text-sm mb-3">Get interactive practice tests, offline access, and personalized learning paths for EuEE exam preparation.</p>
         <a
-          href="https://play.google.com/store/apps/details?id=com.examgalaxy"
+          href="https://play.google.com/store/apps/details?id=com.appysinia.exam_galaxy&pcampaignid=web_share"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block rounded-lg bg-primary-foreground px-4 py-2 text-sm font-semibold text-primary hover:opacity-90 transition"

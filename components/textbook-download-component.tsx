@@ -171,7 +171,7 @@ export function TextbookDownloadComponent({
               Download PDF
             </a>
             <a
-              href="https://play.google.com/store/apps/details?id=com.examgalaxy"
+              href="https://play.google.com/store/apps/details?id=com.appysinia.exam_galaxy&pcampaignid=web_share"
               target="_blank"
               rel="noopener noreferrer"
               className="flex-1 rounded-lg border border-primary px-6 py-3 font-semibold text-primary hover:bg-primary/5 transition text-center"

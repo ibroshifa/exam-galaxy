@@ -63,7 +63,7 @@ export function Header() {
         <div className="flex items-center gap-4">
           {/* Download Button */}
           <a
-            href="https://play.google.com/store/apps/details?id=com.examgalaxy"
+            href="https://play.google.com/store/apps/details?id=com.appysinia.exam_galaxy&pcampaignid=web_share"
             target="_blank"
             rel="noopener noreferrer"
             className="hidden sm:inline-flex items-center gap-2 rounded-lg bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:bg-primary/90 transition"
@@ -146,7 +146,7 @@ export function Header() {
               About
             </a>
             <a
-              href="https://play.google.com/store/apps/details?id=com.examgalaxy"
+              href="https://play.google.com/store/apps/details?id=com.appysinia.exam_galaxy&pcampaignid=web_share"
               target="_blank"
               rel="noopener noreferrer"
               className="block w-full rounded-lg bg-primary px-4 py-2 text-center text-sm font-medium text-primary-foreground hover:bg-primary/90"

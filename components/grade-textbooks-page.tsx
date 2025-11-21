@@ -320,7 +320,7 @@ export function GradeTextbooksPage({ grade }: { grade: number }) {
               Download the Exam Galaxy app for thousands of practice questions, mock exams, personalized study plans, and offline access to all textbooks.
             </p>
             <Button size="lg" className="gap-2 bg-primary hover:bg-primary/90" asChild>
-              <a href="https://play.google.com/store/apps/details?id=com.examgalaxy" target="_blank" rel="noopener noreferrer">
+              <a href="https://play.google.com/store/apps/details?id=com.appysinia.exam_galaxy&pcampaignid=web_share" target="_blank" rel="noopener noreferrer">
                 <Download className="h-5 w-5" />
                 Download Exam Galaxy App
               </a>

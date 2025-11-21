@@ -1,2 +1,6 @@
 natural and social are separated at 11 and 12
 floating header with rounded bg-blur
+read me file
+
+
+for down grades
