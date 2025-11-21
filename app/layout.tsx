@@ -83,7 +83,7 @@ export const metadata: Metadata = {
     ],
     apple: '/apple-icon.png',
   },
-    generator: 'v0.app'
+
 }
 
 export default function RootLayout({
@@ -94,6 +94,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        <meta name="google-site-verification" content="64dHM-uDm5DkSH7PjmVS7pyxn1CievmGIs1Byx95U-Q" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -118,7 +119,6 @@ export default function RootLayout({
             }),
           }}
         />
-        <meta name="google-site-verification" content="64dHM-uDm5DkSH7PjmVS7pyxn1CievmGIs1Byx95U-Q" />
       </head>
       {/* <body className={`${inter.variable} ${spaceGrotesk.variable} font-sans antialiased`}> */}
       <body className={`font-sans antialiased`}>
