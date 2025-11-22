@@ -11,4 +11,7 @@ module.exports = {
       },
     ],
   },
+  additionalSitemaps:[
+    "https://exam-galaxy.vercel.app/sitemap.xml"
+  ]
 };

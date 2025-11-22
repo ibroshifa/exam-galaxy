@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://examgalaxy.com',
+    url: 'https://exam-galaxy.vercel.app',
     siteName: 'Exam Galaxy',
     title: 'Exam Galaxy - Ethiopian Textbooks & EuEE Exam Preparation',
     description: 'Free Ethiopian textbook PDFs and EuEE exam preparation app for high school students',
@@ -103,8 +103,8 @@ export default function RootLayout({
               '@type': 'EducationalOrganization',
               name: 'Exam Galaxy',
               description: 'Free Ethiopian high school textbooks and EuEE exam preparation resources',
-              url: 'https://examgalaxy.com',
-              logo: 'https://examgalaxy.com/logo.png',
+              url: 'https://exam-galaxy.vercel.app',
+              logo: 'https://exam-galaxy.vercel.app/logo.png',
               sameAs: [
                 'https://facebook.com/examgalaxy',
                 'https://twitter.com/examgalaxy',

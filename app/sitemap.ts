@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://examgalaxy.com'
+  const baseUrl = 'https://exam-galaxy.vercel.app'
   
   const grades = [9, 10, 11, 12]
   const subjects = [
