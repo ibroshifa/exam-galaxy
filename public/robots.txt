@@ -9,3 +9,4 @@ Host: https://exam-galaxy.vercel.app
 Sitemap: https://exam-galaxy.vercel.app/sitemap.xml
 Sitemap: https://exam-galaxy.vercel.app/myfile.xml
 Sitemap: https://exam-galaxy.vercel.app/myfile2.xml
+Sitemap: https://exam-galaxy.vercel.app/site.xml
