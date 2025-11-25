@@ -6,7 +6,4 @@ Allow: /
 Host: https://exam-galaxy.vercel.app
 
 # Sitemaps
-Sitemap: https://exam-galaxy.vercel.app/sitemap.xml
-Sitemap: https://exam-galaxy.vercel.app/myfile.xml
-Sitemap: https://exam-galaxy.vercel.app/myfile2.xml
 Sitemap: https://exam-galaxy.vercel.app/site.xml
