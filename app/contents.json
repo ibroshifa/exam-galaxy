@@ -10,11 +10,12 @@
                 "Unit 5: HUman health, nutrition and diseases",
                 "Unit 6: Ecology"
             ],
-            "book_URL":""
+            "book_URL":"",
+            "thumbnail":""
         },
         "physics":{
             "Course-Outline":[
-                "Unit 1: Physics and Human Society",
+                "Unit 1: physics and Human Society",
                 "Unit 2: Physical Quanities",
                 "Unit 3: Motion and a Straight Line",
                 "Unit 4: Force, Work, Energy and Power",
@@ -22,7 +23,8 @@
                 "Unit 6: Mechanical oscillation and Sound wave",
                 "Unit 7: Temperature and Thermometry"
             ],
-            "book_URL":""
+            "book_URL":"",
+            "thumbnail":""
         },
         "chemistry":{
             "Course-Outline":[
@@ -32,7 +34,8 @@
                 "Unit 4: Periodic classification of the elements",
                 "Unit 5: Chemical Bonding"
             ],
-            "book_URL":""
+            "book_URL":"",
+            "thumbnail":""
         },
         "geography":{
             "Course-Outline":[
@@ -45,7 +48,8 @@
                 "Unit 7: Contemporary geographic issues and public concerns in ethiopia",
                 "Unit 8: Geography inquiry skills and theqniues"
             ],
-            "book_URL":""
+            "book_URL":"",
+            "thumbnail":""
         },
         "history":{
             "Course-Outline":[
@@ -59,7 +63,8 @@
                 "Unit 8: political, social and economic processes in Ethiopia from mid-16th to mid-19th century",
                 "Unit 9: The age of Revolutions 1750s to 1815"
             ],
-            "book_URL":""
+            "book_URL":"",
+            "thumbnail":""
         },
         "english":{
             "Course-Outline":[
@@ -74,7 +79,8 @@
                 "Unit 9: Fairness and Equity",
                 "Unit 10: The Internet"
             ],
-            "book_URL":""
+            "book_URL":"",
+            "thumbnail":""
         },
         "maths":{
             "Course-Outline":[
@@ -88,7 +94,8 @@
                 "Unit 7: Vectors in two dimentions",
                 "Unit 7: Statics and Probability"
             ],
-            "book_URL":""
+            "book_URL":"",
+            "thumbnail":""
         },
         "economics":{
             "Course-Outline":[
@@ -101,7 +108,8 @@
                 "Unit 7: Introduction to Macroeconomics",
                 "Unit 8: Basic Enterprenurship"
             ],
-            "book_URL":""
+            "book_URL":"",
+            "thumbnail":""
         },
         "citizenship":{
             "Course-Outline":[
@@ -114,7 +122,8 @@
                 "Unit 7: Problem solving skills",
                 "Unit 8: Ethiopia's foreign relation in East Africa"
             ],
-            "book_URL":""
+            "book_URL":"",
+            "thumbnail":""
         },
         "hpe":{
             "Course-Outline":[
@@ -127,7 +136,8 @@
                 "Unit 7: Handball",
                 "Unit 8: Self-Defense and Sport Ethics"
             ],
-            "book_URL":""
+            "book_URL":"",
+            "thumbnail":""
         },
         "it":{
             "Course-Outline":[
@@ -141,7 +151,8 @@
                 "Unit 8: ",
                 "Unit 9: ",
                 "Unit 10: "            ],
-            "book_URL":""
+            "book_URL":"",
+            "thumbnail":""
         },
         "pva":{
             "Course-Outline":[
@@ -155,11 +166,12 @@
                 "Unit 8: ",
                 "Unit 9: ",
                 "Unit 10: "            ],
-            "book_URL":""
+            "book_URL":"",
+            "thumbnail":""
         }
     },
     "grade-10":{
-        "Physics":{
+        "physics":{
             "Course-Outline":[
                 "Unit 1: ",
                 "Unit 2: ",
@@ -171,7 +183,8 @@
                 "Unit 8: ",
                 "Unit 9: ",
                 "Unit 10: "            ],
-            "book_URL":""
+            "book_URL":"",
+            "thumbnail":""
         },
         "biology":{
             "Course-Outline":[
@@ -185,7 +198,8 @@
                 "Unit 8: ",
                 "Unit 9: ",
                 "Unit 10: "            ],
-            "book_URL":""
+            "book_URL":"",
+            "thumbnail":""
         },
         "chemistry":{
             "Course-Outline":[
@@ -199,7 +213,8 @@
                 "Unit 8: ",
                 "Unit 9: ",
                 "Unit 10: "            ],
-            "book_URL":""
+            "book_URL":"",
+            "thumbnail":""
         },
         "geography":{
             "Course-Outline":[
@@ -213,7 +228,8 @@
                 "Unit 8: ",
                 "Unit 9: ",
                 "Unit 10: "            ],
-            "book_URL":""
+            "book_URL":"",
+            "thumbnail":""
         },
         "history":{
             "Course-Outline":[
@@ -227,7 +243,8 @@
                 "Unit 8: ",
                 "Unit 9: ",
                 "Unit 10: "            ],
-            "book_URL":""
+            "book_URL":"",
+            "thumbnail":""
         },
         "english":{
             "Course-Outline":[
@@ -241,7 +258,8 @@
                 "Unit 8: ",
                 "Unit 9: ",
                 "Unit 10: "            ],
-            "book_URL":""
+            "book_URL":"",
+            "thumbnail":""
         },
         "maths":{
             "Course-Outline":[
@@ -255,7 +273,8 @@
                 "Unit 8: ",
                 "Unit 9: ",
                 "Unit 10: "            ],
-            "book_URL":""
+            "book_URL":"",
+            "thumbnail":""
         },
         "economics":{
             "Course-Outline":[
@@ -269,7 +288,8 @@
                 "Unit 8: ",
                 "Unit 9: ",
                 "Unit 10: "            ],
-            "book_URL":""
+            "book_URL":"",
+            "thumbnail":""
         },
         "citizenship":{
             "Course-Outline":[
@@ -283,7 +303,8 @@
                 "Unit 8: ",
                 "Unit 9: ",
                 "Unit 10: "            ],
-            "book_URL":""
+            "book_URL":"",
+            "thumbnail":""
         },
         "hpe":{
             "Course-Outline":[
@@ -297,7 +318,8 @@
                 "Unit 8: ",
                 "Unit 9: ",
                 "Unit 10: "            ],
-            "book_URL":""
+            "book_URL":"",
+            "thumbnail":""
         },
         "it":{
             "Course-Outline":[
@@ -311,7 +333,8 @@
                 "Unit 8: ",
                 "Unit 9: ",
                 "Unit 10: "            ],
-            "book_URL":""
+            "book_URL":"",
+            "thumbnail":""
         },
         "pva":{
             "Course-Outline":[
@@ -325,11 +348,12 @@
                 "Unit 8: ",
                 "Unit 9: ",
                 "Unit 10: "            ],
-            "book_URL":""
+            "book_URL":"",
+            "thumbnail":""
         }
     },
     "grade-11":{
-        "Physics":{
+        "physics":{
             "Course-Outline":[
                 "Unit 1: ",
                 "Unit 2: ",
@@ -341,7 +365,8 @@
                 "Unit 8: ",
                 "Unit 9: ",
                 "Unit 10: "            ],
-            "book_URL":""
+            "book_URL":"https://www.examgalaxy.com/books/physics/grade11physics.pdf",
+            "thumbnail":""
         },
         "biology":{
             "Course-Outline":[
@@ -355,7 +380,8 @@
                 "Unit 8: ",
                 "Unit 9: ",
                 "Unit 10: "            ],
-            "book_URL":""
+            "book_URL":"https://www.examgalaxy.com/books/biology/grade11biology.pdf",
+            "thumbnail":""
         },
         "chemistry":{
             "Course-Outline":[
@@ -369,7 +395,8 @@
                 "Unit 8: ",
                 "Unit 9: ",
                 "Unit 10: "            ],
-            "book_URL":""
+            "book_URL":"https://www.examgalaxy.com/books/chemistry/grade11chemistry.pdf",
+            "thumbnail":""
         },
         "geography":{
             "Course-Outline":[
@@ -383,7 +410,8 @@
                 "Unit 8: ",
                 "Unit 9: ",
                 "Unit 10: "            ],
-            "book_URL":""
+            "book_URL":"https://www.examgalaxy.com/books/geography/grade11geography.pdf",
+            "thumbnail":""
         },
         "history":{
             "Course-Outline":[
@@ -397,7 +425,8 @@
                 "Unit 8: ",
                 "Unit 9: ",
                 "Unit 10: "            ],
-            "book_URL":""
+            "book_URL":"https://www.examgalaxy.com/books/history/grade11history.pdf",
+            "thumbnail":""
         },
         "english":{
             "Course-Outline":[
@@ -411,7 +440,8 @@
                 "Unit 8: ",
                 "Unit 9: ",
                 "Unit 10: "            ],
-            "book_URL":""
+            "book_URL":"https://www.examgalaxy.com/books/english/grade11english.pdf",
+            "thumbnail":""
         },
         "maths":{
             "Course-Outline":[
@@ -425,7 +455,8 @@
                 "Unit 8: ",
                 "Unit 9: ",
                 "Unit 10: "            ],
-            "book_URL":""
+            "book_URL":"https://www.examgalaxy.com/books/mathematics/grade11mathematics.pdf",
+            "thumbnail":""
         },
         "economics":{
             "Course-Outline":[
@@ -439,7 +470,8 @@
                 "Unit 8: ",
                 "Unit 9: ",
                 "Unit 10: "            ],
-            "book_URL":""
+            "book_URL":"https://www.examgalaxy.com/books/economics/grade11economics.pdf",
+            "thumbnail":""
         },
         "citizenship":{
             "Course-Outline":[
@@ -453,7 +485,8 @@
                 "Unit 8: ",
                 "Unit 9: ",
                 "Unit 10: "            ],
-            "book_URL":""
+            "book_URL":"https://www.examgalaxy.com/books/citizenship/grade11citizenship.pdf",
+            "thumbnail":""
         },
         "hpe":{
             "Course-Outline":[
@@ -467,7 +500,8 @@
                 "Unit 8: ",
                 "Unit 9: ",
                 "Unit 10: "            ],
-            "book_URL":""
+            "book_URL":"https://www.examgalaxy.com/books/hpe/grade11hpe.pdf",
+            "thumbnail":""
         },
         "it":{
             "Course-Outline":[
@@ -481,7 +515,8 @@
                 "Unit 8: ",
                 "Unit 9: ",
                 "Unit 10: "            ],
-            "book_URL":""
+            "book_URL":"https://www.examgalaxy.com/books/it/grade11biology.pdf",
+            "thumbnail":""
         },
         "pva":{
             "Course-Outline":[
@@ -495,11 +530,12 @@
                 "Unit 8: ",
                 "Unit 9: ",
                 "Unit 10: "            ],
-            "book_URL":""
+            "book_URL":"https://www.examgalaxy.com/books/pva/grade11pva.pdf",
+            "thumbnail":""
         }
     },
     "grade-12":{
-        "Physics":{
+        "physics":{
             "Course-Outline":[
                 "Unit 1: ",
                 "Unit 2: ",
@@ -511,7 +547,8 @@
                 "Unit 8: ",
                 "Unit 9: ",
                 "Unit 10: "            ],
-            "book_URL":""
+            "book_URL":"https://www.examgalaxy.com/books/physics/grade12physics.pdf",
+            "thumbnail":""
         },
         "biology":{
             "Course-Outline":[
@@ -525,7 +562,8 @@
                 "Unit 8: ",
                 "Unit 9: ",
                 "Unit 10: "            ],
-            "book_URL":""
+            "book_URL":"https://www.examgalaxy.com/books/biology/grade12biology.pdf",
+            "thumbnail":""
         },
         "chemistry":{
             "Course-Outline":[
@@ -539,7 +577,8 @@
                 "Unit 8: ",
                 "Unit 9: ",
                 "Unit 10: "            ],
-            "book_URL":""
+            "book_URL":"https://www.examgalaxy.com/books/chemistry/grade12chemistry.pdf",
+            "thumbnail":""
         },
         "geography":{
             "Course-Outline":[
@@ -553,7 +592,8 @@
                 "Unit 8: ",
                 "Unit 9: ",
                 "Unit 10: "            ],
-            "book_URL":""
+            "book_URL":"https://www.examgalaxy.com/books/geography/grade12geography.pdf",
+            "thumbnail":""
         },
         "history":{
             "Course-Outline":[
@@ -567,7 +607,8 @@
                 "Unit 8: ",
                 "Unit 9: ",
                 "Unit 10: "            ],
-            "book_URL":""
+            "book_URL":"https://www.examgalaxy.com/books/history/grade12history.pdf",
+            "thumbnail":""
         },
         "english":{
             "Course-Outline":[
@@ -581,7 +622,8 @@
                 "Unit 8: ",
                 "Unit 9: ",
                 "Unit 10: "            ],
-            "book_URL":""
+            "book_URL":"https://www.examgalaxy.com/books/english/grade12english.pdf",
+            "thumbnail":""
         },
         "maths":{
             "Course-Outline":[
@@ -595,7 +637,8 @@
                 "Unit 8: ",
                 "Unit 9: ",
                 "Unit 10: "            ],
-            "book_URL":""
+            "book_URL":"https://www.examgalaxy.com/books/mathematics/grade12mathematics.pdf",
+            "thumbnail":""
         },
         "economics":{
             "Course-Outline":[
@@ -609,7 +652,8 @@
                 "Unit 8: ",
                 "Unit 9: ",
                 "Unit 10: "            ],
-            "book_URL":""
+            "book_URL":"https://www.examgalaxy.com/books/economics/grade12economics.pdf",
+            "thumbnail":""
         },
         "citizenship":{
             "Course-Outline":[
@@ -623,7 +667,8 @@
                 "Unit 8: ",
                 "Unit 9: ",
                 "Unit 10: "            ],
-            "book_URL":""
+            "book_URL":"https://www.examgalaxy.com/books/citizenship/grade12citizenship.pdf",
+            "thumbnail":""
         },
         "hpe":{
             "Course-Outline":[
@@ -637,7 +682,8 @@
                 "Unit 8: ",
                 "Unit 9: ",
                 "Unit 10: "            ],
-            "book_URL":""
+            "book_URL":"https://www.examgalaxy.com/books/hpe/grade12hpe.pdf",
+            "thumbnail":""
         },
         "it":{
             "Course-Outline":[
@@ -651,7 +697,8 @@
                 "Unit 8: ",
                 "Unit 9: ",
                 "Unit 10: "            ],
-            "book_URL":""
+            "book_URL":"https://www.examgalaxy.com/books/it/grade12it.pdf",
+            "thumbnail":""
         },
         "pva":{
             "Course-Outline":[
@@ -665,7 +712,8 @@
                 "Unit 8: ",
                 "Unit 9: ",
                 "Unit 10: "            ],
-            "book_URL":""
+            "book_URL":"https://www.examgalaxy.com/books/pva/grade12pva.pdf",
+            "thumbnail":""
         }
     }
 
