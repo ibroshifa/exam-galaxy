@@ -11,6 +11,7 @@ const nextConfig = {
   }, 
 }
 
-const { extendConfig } = require('@cloudflare/next-on-pages');
+// Cloudflare adapter for Pages
+import { extendConfig } from '@cloudflare/next-on-pages';
 
 module.exports = extendConfig(nextConfig);
