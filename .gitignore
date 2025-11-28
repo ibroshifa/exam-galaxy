@@ -2,6 +2,4 @@ node_modules
 .next/
 .gitignore
 /out
-tsconfig.json
 .env
-next-env.d.ts
