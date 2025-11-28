@@ -1,7 +1,6 @@
 
 import { Metadata } from 'next'
 import { TextbookDownloadComponent } from '@/components/textbook-download-component'
-import { useParams } from 'next/navigation'
 import { notFound } from 'next/navigation'
 
 // This is a dynamic route for testing new features and functionality
@@ -47,13 +46,12 @@ const subjectDescriptions: Record<string, string> = {
   'math-social': 'Mathematics for Social Science stream. Learn statistics, applied mathematics, economics mathematics. Free PDF download for EuEE preparation.',
 }
 
-export default function DynamicTextbookPage() {
-  const params = useParams()
-  const grade = parseInt(params.grade as string)
-  const subject = params.subject as string
+// This is now a pure Server Component → generateStaticParams is allowed
+export default function TextbookPage({ params }: { params: { grade: string; subject: string } }) {
+  const grade = parseInt(params.grade)
+  const subject = params.subject
 
-  // Validation
-  if (isNaN(grade) || grade < 9 || grade > 12 || !validSubjects.includes(subject)) {
+  if (isNaN(grade) || grade < 9 || grade > 12 || !validSubjects.includes(subject as any)) {
     notFound()
   }
 
