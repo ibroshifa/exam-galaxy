@@ -61,7 +61,7 @@ export default function TextbookPage({ params }: { params: { grade: string; subj
 
   return (
     <TextbookDownloadComponent
-      grade={grade}
+      grade={grade as 9|10|11|12}
       subject={subjectTitle}
       title={pageTitle}
       description={subjectDescription}

@@ -18,7 +18,7 @@ export const viewport: Viewport = {
 }
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://exam-galaxyvercel.app'),
+  metadataBase: new URL('https://books.examgalaxy.com/'),
   title: {
     default: 'Exam Galaxy - Free Ethiopian Textbooks & EuEE Exam Preparation',
     template: '%s | Exam Galaxy',
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://exam-galaxy.vercel.app',
+    url: 'https://books.examgalaxy.com',
     siteName: 'Exam Galaxy',
     title: 'Exam Galaxy - Ethiopian Textbooks & EuEE Exam Preparation',
     description: 'Free Ethiopian textbook PDFs and EuEE exam preparation app for high school students',
@@ -103,8 +103,8 @@ export default function RootLayout({
               '@type': 'EducationalOrganization',
               name: 'Exam Galaxy',
               description: 'Free Ethiopian high school textbooks and EuEE exam preparation resources',
-              url: 'https://exam-galaxy.vercel.app',
-              logo: 'https://exam-galaxy.vercel.app/logo.png',
+              url: 'https://books.examgalaxy.com',
+              logo: 'https://books.examgalaxy.com/logo.png',
               sameAs: [
                 'https://facebook.com/examgalaxy',
                 'https://twitter.com/examgalaxy',

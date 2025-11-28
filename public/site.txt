@@ -1,7 +1,7 @@
-https://exam-galaxy.vercel.app/
-https://exam-galaxy.vercel.app/grade-9-textbooks
-https://exam-galaxy.vercel.app/grade-10-textbooks
-https://exam-galaxy.vercel.app/grade-11-textbooks
-https://exam-galaxy.vercel.app/grade-12-textbooks
-https://exam-galaxy.vercel.app/books-grade-9-biology
-https://exam-galaxy.vercel.app/books-grade-9-history
+https://books.examgalaxy.com/
+https://books.examgalaxy.com/grade-9-textbooks
+https://books.examgalaxy.com/grade-10-textbooks
+https://books.examgalaxy.com/grade-11-textbooks
+https://books.examgalaxy.com/grade-12-textbooks
+https://books.examgalaxy.com/books-grade-9-biology
+https://books.examgalaxy.com/books-grade-9-history

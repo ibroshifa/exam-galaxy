@@ -3,8 +3,8 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://exam-galaxy.vercel.app
+Host: https://books.examgalaxy.com/
 
 # Sitemaps
-Sitemap: https://exam-galaxy.vercel.app/sitemap.xml
-Sitemap: https://exam-galaxy.vercel.app/site.txt
+Sitemap: https://books.examgalaxy.com/sitemap.xml
+Sitemap: https://books.examgalaxy.com/site.txt

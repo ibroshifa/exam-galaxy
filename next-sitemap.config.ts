@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: "https://exam-galaxy.vercel.app",
+  siteUrl: "https://books.examgalaxy.com/",
   generateRobotsTxt: true,
   sitemapSize: 7000, // optional
   robotsTxtOptions: {
