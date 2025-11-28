@@ -48,7 +48,7 @@ const subjectDescriptions: Record<string, string> = {
 
 // This is now a pure Server Component → generateStaticParams is allowed
 export default function TextbookPage({ params }: { params: { grade: string; subject: string } }) {
-  const grade = parseInt(params.grade)
+  const grade = parseInt(params.grade) as 9|10|11|12
   const subject = params.subject
 
   if (isNaN(grade) || grade < 9 || grade > 12 || !validSubjects.includes(subject as any)) {
