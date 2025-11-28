@@ -71,3 +71,33 @@ export default function DynamicTextbookPage() {
     />
   )
 }
+
+// Add this function at the bottom of your file (or top, doesn't matter)
+export async function generateStaticParams() {
+  const grades = [9, 10, 11, 12] as const
+  const subjects = [
+    'physics',
+    'chemistry',
+    'biology',
+    'english-science',
+    'math-natural',
+    'history',
+    'geography',
+    'economics',
+    'english-social',
+    'math-social',
+  ] as const
+
+  const paths: { grade: string; subject: string }[] = []
+
+  for (const grade of grades) {
+    for (const subject of subjects) {
+      paths.push({
+        grade: grade.toString(),    // must be string
+        subject: subject,
+      })
+    }
+  }
+
+  return paths
+}
