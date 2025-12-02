@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { useTheme } from 'next-themes'
 import { Menu, X, Moon, Sun } from 'lucide-react'
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 
 const grades = ['Grade 9', 'Grade 10', 'Grade 11', 'Grade 12']
 
@@ -17,9 +18,7 @@ export function Header() {
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2 sm:px-6 lg:px-8 ">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
-          <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary text-primary-foreground font-bold text-lg">
-            EG
-          </div>
+          <Image alt='' src={'/exam-galaxy-icon.jpg'} width={40} height={40} className='rounded-lg'/>
           <span className="hidden font-display font-bold text-foreground sm:inline">Exam Galaxy</span>
         </Link>
 

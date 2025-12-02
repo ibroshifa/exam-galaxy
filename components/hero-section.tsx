@@ -131,9 +131,9 @@ export function HeroSection() {
                   ease: "easeInOut"
                 }}
               >
-                <div className="relative aspect-[9/19] w-full overflow-hidden rounded-3xl border-8 border-gray-800 bg-white shadow-2xl">
+                <div className="relative aspect-[9/17] w-full overflow-hidden rounded-3xl border-8 border-gray-800 bg-white shadow-2xl">
                   <Image
-                    src="/exam-galaxy-app-euee-questions-interface.jpg"
+                    src="/homePageImage.jpg"
                     alt="Exam Galaxy App - EuEE Questions"
                     fill
                     className="object-cover"
