@@ -10,7 +10,7 @@
                 "Unit 5: HUman health, nutrition and diseases",
                 "Unit 6: Ecology"
             ],
-            "book_URL":"",
+            "book_URL":"https://www.examgalaxy.com/books/biology/grade9biology.pdf",
             "thumbnail":""
         },
         "physics":{
@@ -23,7 +23,7 @@
                 "Unit 6: Mechanical oscillation and Sound wave",
                 "Unit 7: Temperature and Thermometry"
             ],
-            "book_URL":"",
+            "book_URL":"https://www.examgalaxy.com/books/physics/grade9physics.pdf",
             "thumbnail":""
         },
         "chemistry":{
@@ -34,7 +34,7 @@
                 "Unit 4: Periodic classification of the elements",
                 "Unit 5: Chemical Bonding"
             ],
-            "book_URL":"",
+            "book_URL":"https://www.examgalaxy.com/books/chemistry/grade9chemistry.pdf",
             "thumbnail":""
         },
         "geography":{
@@ -48,7 +48,7 @@
                 "Unit 7: Contemporary geographic issues and public concerns in ethiopia",
                 "Unit 8: Geography inquiry skills and theqniues"
             ],
-            "book_URL":"",
+            "book_URL":"https://www.examgalaxy.com/books/geography/grade9geography.pdf",
             "thumbnail":""
         },
         "history":{
@@ -63,7 +63,7 @@
                 "Unit 8: political, social and economic processes in Ethiopia from mid-16th to mid-19th century",
                 "Unit 9: The age of Revolutions 1750s to 1815"
             ],
-            "book_URL":"",
+            "book_URL":"https://www.examgalaxy.com/books/history/grade9history.pdf",
             "thumbnail":""
         },
         "english":{
@@ -79,7 +79,7 @@
                 "Unit 9: Fairness and Equity",
                 "Unit 10: The Internet"
             ],
-            "book_URL":"",
+            "book_URL":"https://www.examgalaxy.com/books/english/grade9english.pdf",
             "thumbnail":""
         },
         "math":{
@@ -94,7 +94,7 @@
                 "Unit 7: Vectors in two dimentions",
                 "Unit 7: Statics and Probability"
             ],
-            "book_URL":"",
+            "book_URL":"https://www.examgalaxy.com/books/math/grade9math.pdf",
             "thumbnail":""
         },
         "economics":{
@@ -108,7 +108,7 @@
                 "Unit 7: Introduction to Macroeconomics",
                 "Unit 8: Basic Enterprenurship"
             ],
-            "book_URL":"",
+            "book_URL":"https://www.examgalaxy.com/books/economics/grade9economics.pdf",
             "thumbnail":""
         },
         "citizenship":{
@@ -122,7 +122,7 @@
                 "Unit 7: Problem solving skills",
                 "Unit 8: Ethiopia's foreign relation in East Africa"
             ],
-            "book_URL":"",
+            "book_URL":"https://www.examgalaxy.com/books/citizenship/grade9citizenship.pdf",
             "thumbnail":""
         },
         "hpe":{
@@ -180,7 +180,7 @@
                 "Unit 5: Magnetism",
                 "Unit 6: Electromagnetic Waves and Geometrical Optics"            
             ],
-            "book_URL":"",
+            "book_URL":"https://www.examgalaxy.com/books/physics/grade10physics.pdf",
             "thumbnail":""
         },
         "biology":{
@@ -192,7 +192,7 @@
                 "Unit 5: Human Biology",
                 "Unit 6: Ecological Interactions"
                 ],
-            "book_URL":"",
+            "book_URL":"https://www.examgalaxy.com/books/biology/grade10biology.pdf",
             "thumbnail":""
         },
         "chemistry":{
@@ -204,7 +204,7 @@
                 "Unit 5: Metals and Nonmetals",
                 "Unit 6: Hydrocarbons And Their Natural Sources"
                 ],
-            "book_URL":"",
+            "book_URL":"https://www.examgalaxy.com/books/chemistry/grade10chemistry.pdf",
             "thumbnail":""
         },
         "geography":{
@@ -218,7 +218,7 @@
                 "Unit 7: Geographic issues and public concerns in Africa",
                 "Unit 8: Geospatial information and data Processing"
             ],
-            "book_URL":"",
+            "book_URL":"https://www.examgalaxy.com/books/geography/grade10geography.pdf",
             "thumbnail":""
         },
         "history":{
@@ -233,7 +233,7 @@
                 "Unit 8: ",
                 "Unit 9: ",
                 "Unit 10: "            ],
-            "book_URL":"",
+            "book_URL":"https://www.examgalaxy.com/books/history/grade10history.pdf",
             "thumbnail":""
         },
         "english":{
@@ -248,7 +248,7 @@
                 "Unit 8: The Healing Power of plants",
                 "Unit 9: Multilingualism",
                 "Unit 10: Digital vs Satellite Television"            ],
-            "book_URL":"",
+            "book_URL":"https://www.examgalaxy.com/books/english/grade10english.pdf",
             "thumbnail":""
         },
         "math":{
@@ -261,7 +261,7 @@
                 "Unit 6: Solid Figures",
                 "Unit 7: Coordinate Geometry"
             ],
-            "book_URL":"",
+            "book_URL":"https://www.examgalaxy.com/books/math/grade10math.pdf",
             "thumbnail":""
         },
         "economics":{
@@ -275,7 +275,7 @@
                 "Unit 7: The Ethiopian Economy",
                 "Unit 8: Business Startups and Innovation"
             ],
-            "book_URL":"",
+            "book_URL":"https://www.examgalaxy.com/books/economics/grade10economics.pdf",
             "thumbnail":""
         },
         "citizenship":{
@@ -289,7 +289,7 @@
                 "Unit 7: Patriotism",
                 "Unit 8: Globalization and Global Issues"           
             ],
-            "book_URL":"",
+            "book_URL":"https://www.examgalaxy.com/books/citizenship/grade10citizenship.pdf",
             "thumbnail":""
         },
         "hpe":{
@@ -303,7 +303,7 @@
                 "Unit 7: Handball",
                 "Unit 8: Self-Defense and Sport Ethics"
             ],
-            "book_URL":"",
+            "book_URL":"https://www.examgalaxy.com/books/hpe/grade10hpe.pdf",
             "thumbnail":""
         },
         "it":{
@@ -315,7 +315,7 @@
                 "Unit 5: Information and computer security",
                 "Unit 6: Fundamentals of programming"
             ],
-            "book_URL":"",
+            "book_URL":"https://www.examgalaxy.com/books/it/grade10it.pdf",
             "thumbnail":""
         },
         "cte":{

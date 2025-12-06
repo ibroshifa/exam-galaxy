@@ -3,8 +3,11 @@
 import { motion } from 'framer-motion'
 import { Card, CardContent } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
-import { BookOpen, Download, ChevronRight } from 'lucide-react'
+import { BookOpen, Download, ChevronRight, ArrowLeft, ArrowRight, ArrowDown, ArrowDown01, ArrowDown01Icon, ArrowDownCircle, ArrowDownCircleIcon } from 'lucide-react'
 import Link from 'next/link'
+import { FramerAnimation3 } from './minorcomponents/animation'
+import { generateFAQSchema } from '@/lib/faqSchema'
+import Script from 'next/script'
 
 const grades = [
   {
@@ -33,9 +36,33 @@ const grades = [
   },
 ]
 
+const FAQs = [
+{
+  question: `Where can i get past entrance exam papers?`,
+  answer:
+    `You can find past entrance exams with answer and explanation in exam galaxy app which you can find in our website.`,
+},
+{
+  question: `Where can i download grade 12 books pdf?`,
+  answer:
+    `You can download all grade 12 books inside examgalaxy website under books section.`,
+},
+
+]
+const faqschema = generateFAQSchema(FAQs)
 export function TextbooksSection() {
-  return (
+  return (<>
+  
+
+    <Script
+      id='faq-schema'
+      type='application/ld+json'
+      dangerouslySetInnerHTML={{
+        __html:JSON.stringify(faqschema)
+      }}
+    />
     <section id="textbooks" className="px-4 py-16 sm:px-6 lg:px-8 lg:py-24 bg-background">
+
       <div className="mx-auto max-w-7xl">
         <motion.div
           initial={{ opacity: 1, y: 20 }}
@@ -101,6 +128,27 @@ export function TextbooksSection() {
           ))}
         </div>
       </div>
+
+  <div className="mt-10">
+    <FramerAnimation3 >
+        <h2 className="font-display text-2xl font-bold text-foreground mb-4">Frequently Asked Questions</h2>
+        <div className="rounded-lg border border-border bg-card p-6 space-y-4">
+          {FAQs.map((faq, idx) => (
+            <details
+            key={idx}
+            className="rounded-md border border-border bg-background p-4"
+            >
+              <summary className="cursor-pointer relative list-none font-semibold text-foreground">
+                <ArrowDownCircleIcon className='inline-block mr-3 relative' size={18}/>
+                {faq.question}
+              </summary>
+              <p className="mt-2 text-sm text-muted-foreground">{faq.answer}</p>
+            </details>
+          ))}
+        </div>
+    </FramerAnimation3>
+  </div>
     </section>
+  </>
   )
 }

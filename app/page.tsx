@@ -6,6 +6,8 @@ import { TextbooksPromoSection } from '@/components/textbooks-promo-section'
 import { TextbooksSection } from '@/components/textbooks-section'
 import { Footer } from '@/components/footer'
 import { AdBanner } from '@/components/ad-banner'
+import Script from 'next/script'
+import { generateFAQSchema } from '@/lib/faqSchema'
 
 export const metadata: Metadata = {
   title: 'Exam Galaxy - Ethiopian University Entrance Exam Questions & Free Textbooks',
@@ -22,9 +24,30 @@ export const metadata: Metadata = {
   },
 }
 
+const FAQs = [
+{
+  question: `Where can i get past entrance exam papers?`,
+  answer:
+    `You can find past entrance exams with answer and explanation in exam galaxy app which you can find in our website.`,
+},
+{
+  question: `Where can i download grade 12 books pdf?`,
+  answer:
+    `You can download all grade 12 books inside examgalaxy website under books section.`,
+},
+
+]
+const faqschema = generateFAQSchema(FAQs)
 export default function HomePage() {
   return (
     <main className="min-h-screen bg-background">
+      <Script
+      id='faq-schema'
+      type='application/ld+json'
+      dangerouslySetInnerHTML={{
+        __html:JSON.stringify(faqschema)
+      }}
+    />
       <HeroSection />
       <AppFeaturesSection />
       <AppScreenshotCarousel />

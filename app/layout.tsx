@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     description: 'Free Ethiopian textbook PDFs and EuEE exam preparation app for high school students',
     images: [
       {
-        url: '/og-image.png',
+        url: '/exam-galaxy-icon.jpg',
         width: 1200,
         height: 630,
         alt: 'Exam Galaxy - Free Ethiopian Textbook Downloads',
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Exam Galaxy - Ethiopian Textbooks & EuEE Exam Preparation',
     description: 'Free Ethiopian textbook PDFs and EuEE exam preparation for grades 9-12',
-    images: ['/og-image.png'],
+    images: ['/exam-galaxy-icon.jpg'],
   },
   robots: {
     index: true,
@@ -81,7 +81,7 @@ export const metadata: Metadata = {
         type: 'image/svg+xml',
       },
     ],
-    apple: '/apple-icon.png',
+    apple: '/exam-galaxy-icon.png',
   },
 
 }
@@ -104,7 +104,7 @@ export default function RootLayout({
               name: 'Exam Galaxy',
               description: 'Free Ethiopian high school textbooks and EuEE exam preparation resources',
               url: 'https://books.examgalaxy.com',
-              logo: 'https://books.examgalaxy.com/logo.png',
+              logo: 'https://books.examgalaxy.com/exam-galaxy-icon.jpg',
               sameAs: [
                 'https://facebook.com/examgalaxy',
                 'https://twitter.com/examgalaxy',
@@ -118,6 +118,11 @@ export default function RootLayout({
               },
             }),
           }}
+        />
+        <script
+        
+        
+        
         />
       </head>
       {/* <body className={`${inter.variable} ${spaceGrotesk.variable} font-sans antialiased`}> */}

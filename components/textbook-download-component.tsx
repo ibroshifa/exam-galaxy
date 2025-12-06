@@ -2,6 +2,9 @@ import { Download, BookOpen, Target } from 'lucide-react'
 import { AdBanner } from './ad-banner'
 import { FramerAnimation1, FramerAnimation2, FramerAnimation3 } from './minorcomponents/animation'
 import data from '../app/contents.json'
+import { Footer } from './footer';
+import Script from 'next/script';
+import { generateFAQSchema } from '@/lib/faqSchema';
 interface TextbookDownloadComponentProps {
   grade: 9|10|11|12;
   subject: string
@@ -9,30 +12,18 @@ interface TextbookDownloadComponentProps {
   description: string
 }
 
+const a = {
+  question: `Where can past entrance exams?`,
+  answer:
+  `You can find exam galaxy questions and practice tests in our app to help you prepare for the EuEE.`,
+}
 export function TextbookDownloadComponent({
   grade,
   subject,
   title,
   description,
 }: TextbookDownloadComponentProps) {
-  const containerVariants = {
-    hidden: { opacity: 1 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  }
-
-  const itemVariants = {
-    hidden: { opacity: 1, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-    },
-  }
-
+  
   if (subject.split(' ')[0]=='Mathematics') {
     subject='math'
   }else if (subject.split(' ')[0]=='English') {
@@ -40,8 +31,37 @@ export function TextbookDownloadComponent({
   }else(
     subject = subject.split(' ')[0]
   )
+  const units = data[`grade-${grade}`][subject.toLocaleLowerCase() as 'physics' | 'biology' | 'chemistry' | 'english' | 'history' | 'geography' | 'economics' | 'math']['Course-Outline']
 
+  const grade9BiologyFAQ = [
+  {
+    question: `What topics are covered in the Ethiopis Grade ${grade} ${subject} textbook?`,
+    answer:
+      `The Grade ${grade} ${subject} textbook covers topics such as ${units.map(unit=>unit.split(':')[1]).splice(0,units.length-1).join()} and ${units[units.length-1].split(':')[1]}`,
+  },
+  {
+    question: `How can I download the Grade ${grade} ${subject} textbook PDF?`,
+    answer:
+      `You can download the Grade ${grade} ${subject} textbook PDF for free from our website by clicking the download link provided on the page.`,
+  },
+  {
+    question: `Where can i get past entrance exams for Grade ${grade} ${subject}?`,
+    answer:
+      `You can find past entrance questions and practice tests in our EXAM GALAXY app to help you prepare for the entrance exam.`,
+  }
+]
+
+const faqschema = generateFAQSchema(grade9BiologyFAQ)
+  
   return (
+    <>
+    <Script
+      id='faq-schema'
+      type='application/ld+json'
+      dangerouslySetInnerHTML={{
+        __html:JSON.stringify(faqschema)
+      }}
+    />
     <main className="min-h-screen bg-background">
       {/* Breadcrumb */}
       <div className="border-b border-border bg-card">
@@ -93,7 +113,7 @@ export function TextbookDownloadComponent({
             <h2 className="font-display text-2xl font-bold text-foreground mb-4">Table of Contents</h2>
             <div className="rounded-lg border border-border bg-card p-6">
               <ul className="space-y-2 text-foreground">
-                {data[`grade-${grade}`][subject.toLocaleLowerCase() as 'physics' | 'biology' | 'chemistry' | 'english' | 'history' | 'geography' | 'economics' | 'math']['Course-Outline'].map((item,index)=>(
+                {units.map((item,index)=>(
                   <li key={index}>
                     <span className="text-primary">•  </span>
                       {item}
@@ -198,8 +218,27 @@ export function TextbookDownloadComponent({
             )}
           </div>
         </FramerAnimation3>
+        {/* FAQ Section */}
+        <FramerAnimation3>
+          <h2 className="font-display text-2xl font-bold text-foreground mb-4">Frequently Asked Questions</h2>
+          <div className="rounded-lg border border-border bg-card p-6 space-y-4">
+            {grade9BiologyFAQ.map((faq, idx) => (
+              <details
+                key={idx}
+                className="rounded-md border border-border bg-background p-4"
+              >
+                <summary className="cursor-pointer list-none font-semibold text-foreground">
+                  {faq.question}
+                </summary>
+                <p className="mt-2 text-sm text-muted-foreground">{faq.answer}</p>
+              </details>
+            ))}
+          </div>
+        </FramerAnimation3>
       
       </FramerAnimation1>
+      <Footer/>
     </main>
+    </>
   )
 }
