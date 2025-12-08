@@ -3,11 +3,12 @@
 import { motion } from 'framer-motion'
 import { Card, CardContent } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
-import { BookOpen, Download, ChevronRight, ArrowLeft, ArrowRight, ArrowDown, ArrowDown01, ArrowDown01Icon, ArrowDownCircle, ArrowDownCircleIcon } from 'lucide-react'
+import { BookOpen, Download, ChevronRight, Plus, Minus } from 'lucide-react'
 import Link from 'next/link'
 import { FramerAnimation3 } from './minorcomponents/animation'
 import { generateFAQSchema } from '@/lib/faqSchema'
 import Script from 'next/script'
+import { useState } from 'react'
 
 const grades = [
   {
@@ -50,6 +51,70 @@ const FAQs = [
 
 ]
 const faqschema = generateFAQSchema(FAQs)
+
+function FAQItem({ question, answer, index }: { question: string; answer: string; index: number }) {
+  const [isOpen, setIsOpen] = useState(false)
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ delay: index * 0.1 }}
+      viewport={{ once: true }}
+      className="rounded-lg border border-border bg-background overflow-hidden hover:shadow-md transition-shadow"
+    >
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        className="w-full px-4 py-4 sm:px-6 sm:py-5 flex items-center justify-between gap-4 hover:bg-muted/50 transition-colors group"
+      >
+        <span className="text-left font-semibold text-foreground text-sm sm:text-base leading-snug">
+          {question}
+        </span>
+        <motion.div
+          animate={{ scale: isOpen ? 1.1 : 1 }}
+          transition={{ duration: 0.2 }}
+          className="flex-shrink-0"
+        >
+          {isOpen ? (
+            <motion.div
+              key="minus"
+              initial={{ scale: 0, rotate: -90 }}
+              animate={{ scale: 1, rotate: 0 }}
+              exit={{ scale: 0, rotate: 90 }}
+              transition={{ duration: 0.2 }}
+            >
+              <Minus className="h-5 w-5 text-primary" />
+            </motion.div>
+          ) : (
+            <motion.div
+              key="plus"
+              initial={{ scale: 0, rotate: -90 }}
+              animate={{ scale: 1, rotate: 0 }}
+              exit={{ scale: 0, rotate: 90 }}
+              transition={{ duration: 0.2 }}
+            >
+              <Plus className="h-5 w-5 text-primary group-hover:text-primary/80 transition-colors" />
+            </motion.div>
+          )}
+        </motion.div>
+      </button>
+
+      <motion.div
+        initial={false}
+        animate={{ height: isOpen ? 'auto' : 0 }}
+        transition={{ duration: 0.2 }}
+        className="overflow-hidden"
+      >
+        <div className="px-4 py-4 sm:px-6 sm:py-5 border-t border-border bg-card">
+          <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">
+            {answer}
+          </p>
+        </div>
+      </motion.div>
+    </motion.div>
+  )
+}
+
 export function TextbooksSection() {
   return (<>
   
@@ -134,16 +199,12 @@ export function TextbooksSection() {
         <h2 className="font-display text-2xl font-bold text-foreground mb-4">Frequently Asked Questions</h2>
         <div className="rounded-lg border border-border bg-card p-6 space-y-4">
           {FAQs.map((faq, idx) => (
-            <details
-            key={idx}
-            className="rounded-md border border-border bg-background p-4"
-            >
-              <summary className="cursor-pointer relative list-none font-semibold text-foreground">
-                <ArrowDownCircleIcon className='inline-block mr-3 relative' size={18}/>
-                {faq.question}
-              </summary>
-              <p className="mt-2 text-sm text-muted-foreground">{faq.answer}</p>
-            </details>
+            <FAQItem
+              key={idx}
+              question={faq.question}
+              answer={faq.answer}
+              index={idx}
+            />
           ))}
         </div>
     </FramerAnimation3>

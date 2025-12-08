@@ -3,3 +3,8 @@ node_modules
 .gitignore
 /out
 .env
+.DS_Store
+.vscode/
+*.log
+coverage/
+app/try

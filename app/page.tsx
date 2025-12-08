@@ -23,19 +23,22 @@ export const metadata: Metadata = {
     canonical: '/',
   },
 }
-
 const FAQs = [
-{
-  question: `Where can i get past entrance exam papers?`,
-  answer:
-    `You can find past entrance exams with answer and explanation in exam galaxy app which you can find in our website.`,
-},
-{
-  question: `Where can i download grade 12 books pdf?`,
-  answer:
-    `You can download all grade 12 books inside examgalaxy website under books section.`,
-},
-
+  {
+    question: `Where can i get past entrance exam papers?`,
+    answer:
+      `You can find past entrance exams with answer and explanation in exam galaxy app which you can find in our website. The app contains question banks from 2007-2017 with detailed solutions.`,
+  },
+  {
+    question: `Where can i download grade 12 books pdf?`,
+    answer:
+      `You can download all grade 12 books inside examgalaxy website under books section. All textbooks are available for free in PDF format for offline access.`,
+  },
+  {
+    question: `What subjects are available in the textbook section?`,
+    answer:
+      `We provide textbooks for subjects including Mathematics, Physics, Chemistry, Biology, English, History, Geography, and Economics for grades 9-12.`,
+  },
 ]
 const faqschema = generateFAQSchema(FAQs)
 export default function HomePage() {
