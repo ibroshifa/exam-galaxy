@@ -39,25 +39,48 @@ const grades = [
 
 const FAQs = [
 {
-  question: `Where can i get past entrance exam papers?`,
-  answer:
-    `You can find past entrance exams with answer and explanation in exam galaxy app which you can find in our website.`,
-},
-{
-  question: `Where can i download grade 12 books pdf?`,
-  answer:
-    `You can download all grade 12 books inside examgalaxy website under books section.`,
-},
-
+    question: `Where can i get past entrance exam papers?`,
+    answer:
+      `You can find past entrance exams with answer and explanation in exam galaxy app which you can find in our website. The app contains question banks from 2007-2017 with detailed solutions.`,
+  },
+  {
+    question: `Where can i download grade 12 books pdf?`,
+    answer:
+      `You can download all grade 12 books inside examgalaxy website under books section. All textbooks are available for free in PDF format for offline access.`,
+  },
+  {
+    question: `What subjects are available in the textbook section?`,
+    answer:
+      `We provide textbooks for subjects including Mathematics, Physics, Chemistry, Biology, English, History, Geography, and Economics for grades 9-12.`,
+  },
+  {
+    question: `How can I use the Exam Galaxy app?`,
+    answer:
+      `Download the Exam Galaxy app from Google Play Store, create an account, and start practicing with our comprehensive question bank. The app features detailed explanations for each question.`,
+  },
+  {
+    question: `Can I download textbooks for offline use?`,
+    answer:
+      `Yes, all textbook PDFs can be downloaded and used offline. This is perfect for studying without internet connectivity.`,
+  },
+  {
+    question: `Which grades are covered?`,
+    answer:
+      `We provide comprehensive study materials for grades 9, 10, 11, and 12, aligned with Ethiopian education standards.`,
+  },
+  {
+    question: `How often are the materials updated?`,
+    answer:
+      `Our materials are regularly updated to reflect the latest curriculum and exam patterns. Check back frequently for new content.`,
+  }
 ]
 const faqschema = generateFAQSchema(FAQs)
 
-function FAQItem({ question, answer, index }: { question: string; answer: string; index: number }) {
+export function FAQItem({ question, answer, index }: { question: string; answer: string; index: number }) {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ delay: index * 0.1 }}
       viewport={{ once: true }}

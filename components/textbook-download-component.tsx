@@ -5,6 +5,7 @@ import data from '../app/contents.json'
 import { Footer } from './footer';
 import Script from 'next/script';
 import { generateFAQSchema } from '@/lib/faqSchema';
+import { FAQItem } from './textbooks-section';
 interface TextbookDownloadComponentProps {
   grade: 9|10|11|12;
   subject: string
@@ -122,6 +123,68 @@ const faqschema = generateFAQSchema(grade9BiologyFAQ)
               </ul>
             </div>
           </FramerAnimation3>
+
+          {/* Book Summary Card */}
+          <FramerAnimation3>
+            <h2 className="font-display text-2xl font-bold text-foreground mb-4">Book Summary</h2>
+            {
+              (() => {
+                const subjectKey = subject.toLocaleLowerCase()
+                const totalUnits = units.length
+                const pagesLookup: Record<string, number> = {
+                  physics: 320,
+                  chemistry: 350,
+                  biology: 380,
+                  math: 420,
+                  english: 280,
+                  history: 360,
+                  geography: 300,
+                  economics: 290,
+                }
+                const totalPages = pagesLookup[subjectKey] ?? undefined
+                const fileSizeMB = totalPages ? Math.max(0.1, Math.round((totalPages * 0.05) * 10) / 10) : undefined // estimate ~50KB per page
+
+                return (
+                  <div className="rounded-lg border border-border bg-card p-6">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                      <div className="space-y-2">
+                        <div className="text-sm text-muted-foreground">Country</div>
+                        <div className="font-semibold text-foreground">Ethiopia</div>
+                      </div>
+                      <div className="space-y-2">
+                        <div className="text-sm text-muted-foreground">Publisher</div>
+                        <div className="font-semibold text-foreground">Ministry of Education</div>
+                      </div>
+                      <div className="space-y-2">
+                        <div className="text-sm text-muted-foreground">Subject</div>
+                        <div className="font-semibold text-foreground">{subject}</div>
+                      </div>
+                      <div className="space-y-2">
+                        <div className="text-sm text-muted-foreground">Grade</div>
+                        <div className="font-semibold text-foreground">Grade {grade}</div>
+                      </div>
+                      <div className="space-y-2">
+                        <div className="text-sm text-muted-foreground">Curriculum</div>
+                        <div className="font-semibold text-foreground">New for all</div>
+                      </div>
+                      <div className="space-y-2">
+                        <div className="text-sm text-muted-foreground">Total Units</div>
+                        <div className="font-semibold text-foreground">{totalUnits}</div>
+                      </div>
+                      <div className="space-y-2">
+                        <div className="text-sm text-muted-foreground">Total Pages</div>
+                        <div className="font-semibold text-foreground">{totalPages ?? '—'}</div>
+                      </div>
+                      <div className="space-y-2">
+                        <div className="text-sm text-muted-foreground">File Size</div>
+                        <div className="font-semibold text-foreground">{fileSizeMB ? `${fileSizeMB} MB (approx)` : '—'}</div>
+                      </div>
+                    </div>
+                  </div>
+                )
+              })()
+            }
+          </FramerAnimation3>
         
 
         {/* Key Features */}
@@ -223,15 +286,12 @@ const faqschema = generateFAQSchema(grade9BiologyFAQ)
           <h2 className="font-display text-2xl font-bold text-foreground mb-4">Frequently Asked Questions</h2>
           <div className="rounded-lg border border-border bg-card p-6 space-y-4">
             {grade9BiologyFAQ.map((faq, idx) => (
-              <details
-                key={idx}
-                className="rounded-md border border-border bg-background p-4"
-              >
-                <summary className="cursor-pointer list-none font-semibold text-foreground">
-                  {faq.question}
-                </summary>
-                <p className="mt-2 text-sm text-muted-foreground">{faq.answer}</p>
-              </details>
+              <FAQItem
+              key={idx}
+              question={faq.question}
+              answer={faq.answer}
+              index={idx}
+              />
             ))}
           </div>
         </FramerAnimation3>
