@@ -4,6 +4,7 @@ import { Analytics } from '@vercel/analytics/next'
 import { Header } from '@/components/header'
 import { ThemeProvider } from '@/components/theme-provider'
 import './globals.css'
+import Script from 'next/script'
 
 // const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 // const spaceGrotesk = Space_Grotesk({ subsets: ['latin'], variable: '--font-space' })
@@ -94,14 +95,21 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-NC400WWJEY"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){(window as any).dataLayer.push(arguments)}
-          gtag('js', new Date());
+        <Script
+        src="https://www.googletagmanager.com/gtag/js?id=AW-17789658042"
+        strategy="afterInteractive"
+      />
 
-          gtag('config', 'G-NC400WWJEY');
-        </script>
+      {/* Initialize gtag */}
+      <Script id="gtag-init" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'AW-17789658042');
+        `}
+      </Script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-NC400WWJEY"></script>
         <meta name="google-site-verification" content="64dHM-uDm5DkSH7PjmVS7pyxn1CievmGIs1Byx95U-Q" />
         <script
           type="application/ld+json"
