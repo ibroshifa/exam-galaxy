@@ -133,11 +133,12 @@ export function HeroSection() {
               >
                 <div className="relative aspect-[9/17] w-full overflow-hidden rounded-3xl border-8 border-gray-800 bg-white shadow-2xl">
                   <Image
-                    src="/homePageImage.jpg"
+                    src="/homePageImage.webp"
                     alt="Exam Galaxy App - EuEE Questions"
                     fill
                     className="object-cover"
                     priority
+                    sizes='100vw'
                   />
                 </div>
               </motion.div>
@@ -161,6 +162,8 @@ export function HeroSection() {
                     alt="Practice Questions Screenshot"
                     fill
                     className="object-cover"
+                    priority
+                    sizes='100vw'
                   />
                 </div>
               </motion.div>

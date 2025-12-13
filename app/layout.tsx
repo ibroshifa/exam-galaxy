@@ -109,7 +109,7 @@ export default function RootLayout({
           gtag('config', 'AW-17789658042');
         `}
       </Script>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-NC400WWJEY"></script>
+        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-NC400WWJEY"></Script>
         <meta name="google-site-verification" content="64dHM-uDm5DkSH7PjmVS7pyxn1CievmGIs1Byx95U-Q" />
         <script
           type="application/ld+json"
