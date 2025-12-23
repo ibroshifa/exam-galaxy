@@ -89,7 +89,8 @@ export function AppScreenshotCarousel() {
   }
 
   return (
-    <section className="px-4 py-16 sm:px-6 lg:px-8 lg:py-24 bg-gradient-to-br from-emerald-50 to-blue-50">
+    <section className="px-4 py-16 sm:px-6 lg:px-8 lg:py-24 bg-gradient-to-br from-emerald-50 to-blue-50 
+                         dark:from-stone-950 dark:via-stone-950 dark:to-stone-950">
       <div className="mx-auto max-w-7xl">
         <motion.div
           initial={{ opacity: 1, y: 20 }}

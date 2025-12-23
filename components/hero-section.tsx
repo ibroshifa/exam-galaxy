@@ -10,19 +10,19 @@ export function HeroSection() {
     <section className="relative overflow-hidden bg-gradient-to-br from-emerald-50 via-yellow-50 to-red-50 px-4 py-16 sm:px-6 lg:px-8 lg:py-24 dark:from-stone-950 dark:via-stone-950 dark:to-stone-950">
       {/* Animated background elements */}
       <motion.div
-        className="absolute -top-24 -right-24 h-96 w-96 rounded-full bg-emerald-200/30 blur-3xl"
+        className="absolute -top-24 -right-24 h-96 w-96 rounded-full  bg-emerald-200/30 blur-3xl"
         animate={{
           scale: [1, 1.2, 1],
           opacity: [0.3, 0.5, 0.3],
         }}
-        transition={{
+        transition={{ 
           duration: 8,
           repeat: Infinity,
           ease: "easeInOut"
         }}
       />
       <motion.div
-        className="absolute -bottom-24 -left-24 h-96 w-96 rounded-full bg-yellow-200/30 blur-3xl"
+        className="absolute  -bottom-24 -left-24 h-96 w-96 rounded-full bg-yellow-200/30 blur-3xl"
         animate={{
           scale: [1.2, 1, 1.2],
           opacity: [0.5, 0.3, 0.5],

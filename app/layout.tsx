@@ -70,11 +70,11 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
-        url: '/exam-galaxy-icon.png',
+        url: '/favicon.ico',
         media: '(prefers-color-scheme: light)',
       },
       {
-        url: '/exam-galaxy-icon.png',
+        url: '/favicon.ico',
         media: '(prefers-color-scheme: dark)',
       },
       {
@@ -82,7 +82,7 @@ export const metadata: Metadata = {
         type: 'image/svg+xml',
       },
     ],
-    apple: '/exam-galaxy-icon.png',
+    apple: '/favicon.ico',
   },
 
 }
@@ -93,12 +93,14 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning> 
       <head>
         <Script
         src="https://www.googletagmanager.com/gtag/js?id=AW-17789658042"
         strategy="afterInteractive"
       />
+      <meta name="theme-color" content="#50C878" media="(prefers-color-scheme: light)"/>
+      <meta name="theme-color" content="#0c0a09" media="(prefers-color-scheme: dark)"/>
 
       {/* Initialize gtag */}
       <Script id="gtag-init" strategy="afterInteractive">

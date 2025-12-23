@@ -39,6 +39,11 @@ const FAQs = [
     answer:
       `We provide textbooks for subjects including Mathematics, Physics, Chemistry, Biology, English, History, Geography, and Economics for grades 9-12.`,
   },
+  {
+    question: `Does the app have a PC or desktop version?`,
+    answer:
+      `No, the app is currently available only for mobile devices. However, we are pleased to provide you with the best experience on your smartphone!`,
+  },
 ]
 const faqschema = generateFAQSchema(FAQs)
 export default function HomePage() {
