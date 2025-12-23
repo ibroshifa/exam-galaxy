@@ -36,7 +36,6 @@ const grades = [
     downloads: '25K+',
   },
 ]
-
 const FAQs = [
 {
     question: `Where can i get past entrance exam papers?`,
@@ -72,7 +71,12 @@ const FAQs = [
     question: `How often are the materials updated?`,
     answer:
       `Our materials are regularly updated to reflect the latest curriculum and exam patterns. Check back frequently for new content.`,
-  }
+  },
+  {
+    question: `Does the app have a PC or desktop version?`,
+    answer:
+      `No, the app is currently available only for mobile devices. However, we are pleased to provide you with the best experience on your smartphone!`,
+  },
 ]
 const faqschema = generateFAQSchema(FAQs)
 
