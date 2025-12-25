@@ -52,8 +52,8 @@ const naturalScienceSubjects: SubjectInfo[] = [
     gradient: 'from-emerald-500 to-teal-500',
   },
   {
-    name: 'English (Natural Science)',
-    slug: 'english-science',
+    name: 'English',
+    slug: 'english',
     icon: BookA,
     description: 'Grammar, Composition, Reading Comprehension, Literature, Writing Skills',
     chapters: 10,
@@ -105,8 +105,8 @@ const socialScienceSubjects: SubjectInfo[] = [
     gradient: 'from-green-600 to-emerald-600',
   },
   {
-    name: 'English (Social Science)',
-    slug: 'english-social',
+    name: 'English',
+    slug: 'english',
     icon: BookA,
     description: 'Literature, Composition, Reading Comprehension, Academic Writing',
     chapters: 10,

@@ -1,3 +1,24 @@
 for down grades
 images for every book for better seo
 metadata
+
+
+
+remaining images
+bio 12
+chem 9 11
+history 10
+
+
+
+
+rem books on server
+history 10
+chem g 9
+
+
+
+
+
+
+remaining book content

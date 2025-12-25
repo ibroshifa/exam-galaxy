@@ -53,7 +53,7 @@ const subjects: SubjectInfo[] = [
   },
   {
     name: 'English',
-    slug: 'english-science',
+    slug: 'english',
     icon: BookA,
     description: 'Grammar, Composition, Reading Comprehension, Literature, Writing Skills',
     chapters: 10,
@@ -63,7 +63,7 @@ const subjects: SubjectInfo[] = [
   },
   {
     name: 'Mathematics',
-    slug: 'math-natural',
+    slug: 'math',
     icon: Calculator,
     description: 'Algebra, Trigonometry, Calculus, Geometry, Advanced Statistics',
     chapters: 15,

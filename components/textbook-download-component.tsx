@@ -6,6 +6,7 @@ import { Footer } from './footer';
 import Script from 'next/script';
 import { generateFAQSchema } from '@/lib/faqSchema';
 import { FAQItem } from './textbooks-section';
+import CoverImage from './CoverImage';
 interface TextbookDownloadComponentProps {
   grade: 9|10|11|12;
   subject: string
@@ -107,8 +108,8 @@ const faqschema = generateFAQSchema(grade9BiologyFAQ)
           <AdBanner variant="inline" />
         </div>
 
+        <CoverImage grade={grade} subject={subject}/>
         {/* Table of Contents */}
-          {/* <div> */}
           <div className="mt-4">
             <h2 className="text-2xl font-bold text-foreground mb-4">Table of Contents</h2>
             <div className="rounded-lg border border-border bg-card p-6">
@@ -122,7 +123,6 @@ const faqschema = generateFAQSchema(grade9BiologyFAQ)
               </ul>
             </div>
           </div>
-          {/* </div> */}
 
           {/* Book Summary Card */}
           <div>
