@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: 'Ethiopian Grade 9 Mathematics textbook for Natural Science stream. Master algebra, geometry, and calculus fundamentals. Free PDF for EuEE preparation.',
   keywords: 'Ethiopian Grade 9 Math, Mathematics textbook, Natural Science Math, Ethiopian math, EuEE prep',
   alternates: {
-    canonical: '/books/grade-9-math-natural',
+    canonical: '/books/grade-9-math',
   },
 }
 

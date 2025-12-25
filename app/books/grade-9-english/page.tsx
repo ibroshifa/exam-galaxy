@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: 'Ethiopian Grade 9 English textbook PDF for Natural Science stream. Improve grammar, reading, and writing skills. Free download for Ethiopian students.',
   keywords: 'Ethiopian Grade 9 English, English textbook, Natural Science English, EuEE prep, English PDF',
   alternates: {
-    canonical: '/books/grade-9-english-science',
+    canonical: '/books/grade-9-english',
   },
 }
 
