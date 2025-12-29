@@ -44,6 +44,7 @@ const FAQs = [
     answer:
       `No, the app is currently available only for mobile devices. However, we are pleased to provide you with the best experience on your smartphone!`,
   },
+  
 ]
 const faqschema = generateFAQSchema(FAQs)
 export default function HomePage() {
