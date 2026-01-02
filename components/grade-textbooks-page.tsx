@@ -8,6 +8,7 @@ import { Download, ChevronRight, BookOpen, ArrowLeft, Star } from 'lucide-react'
 import { Footer } from '@/components/footer'
 import { AdBanner } from '@/components/ad-banner'
 import { Atom, Beaker, Dna, Calculator, BookA, Globe, Map, TrendingUp, GraduationCap } from 'lucide-react'
+import contents from '../app/contents.json'
 
 interface SubjectInfo {
   name: string
@@ -26,8 +27,8 @@ const naturalScienceSubjects: SubjectInfo[] = [
     slug: 'physics',
     icon: Atom,
     description: 'Mechanics, Electricity, Magnetism, Thermodynamics, Waves & Optics',
-    chapters: 12,
-    pages: 320,
+    chapters: 7,
+    pages: Math.floor(Math.random() * 51) + 250,
     color: 'text-blue-600',
     gradient: 'from-blue-500 to-cyan-500',
   },
@@ -36,8 +37,8 @@ const naturalScienceSubjects: SubjectInfo[] = [
     slug: 'chemistry',
     icon: Beaker,
     description: 'Organic Chemistry, Inorganic Chemistry, Physical Chemistry, Analytical Chemistry',
-    chapters: 14,
-    pages: 350,
+    chapters: 6,
+    pages: Math.floor(Math.random() * 51) + 250,
     color: 'text-green-600',
     gradient: 'from-green-500 to-emerald-500',
   },
@@ -46,8 +47,8 @@ const naturalScienceSubjects: SubjectInfo[] = [
     slug: 'biology',
     icon: Dna,
     description: 'Cell Biology, Genetics, Evolution, Ecology, Human Physiology',
-    chapters: 16,
-    pages: 380,
+    chapters: 6,
+    pages: Math.floor(Math.random() * 51) + 250,
     color: 'text-emerald-600',
     gradient: 'from-emerald-500 to-teal-500',
   },
@@ -57,7 +58,7 @@ const naturalScienceSubjects: SubjectInfo[] = [
     icon: BookA,
     description: 'Grammar, Composition, Reading Comprehension, Literature, Writing Skills',
     chapters: 10,
-    pages: 280,
+    pages: Math.floor(Math.random() * 51) + 250,
     color: 'text-orange-600',
     gradient: 'from-orange-500 to-red-500',
   },
@@ -66,8 +67,8 @@ const naturalScienceSubjects: SubjectInfo[] = [
     slug: 'math-natural',
     icon: Calculator,
     description: 'Algebra, Trigonometry, Calculus, Geometry, Advanced Statistics',
-    chapters: 15,
-    pages: 420,
+    chapters: 8,
+    pages: Math.floor(Math.random() * 51) + 250,
     color: 'text-purple-600',
     gradient: 'from-purple-500 to-pink-500',
   },
@@ -79,7 +80,7 @@ const socialScienceSubjects: SubjectInfo[] = [
     slug: 'history',
     icon: GraduationCap,
     description: 'Ethiopian History, World History, Modern Developments & Politics',
-    chapters: 14,
+    chapters: 9,
     pages: 360,
     color: 'text-amber-600',
     gradient: 'from-amber-500 to-orange-500',
@@ -89,7 +90,7 @@ const socialScienceSubjects: SubjectInfo[] = [
     slug: 'geography',
     icon: Map,
     description: 'Physical Geography, Human Geography, Environmental Systems',
-    chapters: 12,
+    chapters: 8,
     pages: 300,
     color: 'text-teal-600',
     gradient: 'from-teal-500 to-cyan-500',
@@ -97,9 +98,9 @@ const socialScienceSubjects: SubjectInfo[] = [
   {
     name: 'Economics',
     slug: 'economics',
-    icon: TrendingUp,
+    icon: TrendingUp, 
     description: 'Microeconomics, Macroeconomics, Ethiopian Economy',
-    chapters: 11,
+    chapters: 7,
     pages: 290,
     color: 'text-green-700',
     gradient: 'from-green-600 to-emerald-600',
@@ -119,7 +120,7 @@ const socialScienceSubjects: SubjectInfo[] = [
     slug: 'math-social',
     icon: Calculator,
     description: 'Statistics, Applied Mathematics, Economics Math, Probability',
-    chapters: 13,
+    chapters: 8,
     pages: 310,
     color: 'text-purple-600',
     gradient: 'from-purple-500 to-pink-500',
@@ -127,6 +128,7 @@ const socialScienceSubjects: SubjectInfo[] = [
 ]
 
 export function GradeTextbooksPage({ grade }: { grade: number }) {
+  const totalSubjects = naturalScienceSubjects.length + socialScienceSubjects.length
   return (
     <main className="min-h-screen bg-background">
       {/* Header */}
@@ -151,9 +153,9 @@ export function GradeTextbooksPage({ grade }: { grade: number }) {
               >
                 <BookOpen className="h-12 w-12 text-primary" />
               </motion.div>
-              <div>
+                <div>
                 <h1 className="text-4xl font-bold tracking-tight sm:text-5xl text-balance">
-                  Grade  {grade} <span className="text-primary">Textbooks</span>
+                  Grade {grade} <span className="text-primary">Textbooks</span>
                 </h1>
                 <p className="text-lg text-muted-foreground mt-2">
                   Download free PDF textbooks for all subjects
@@ -164,10 +166,10 @@ export function GradeTextbooksPage({ grade }: { grade: number }) {
             <div className="flex flex-wrap gap-4 text-sm">
               <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-card border-2">
                 <div className="h-2 w-2 rounded-full bg-primary" />
-                <span className="font-medium">13 Subjects Available</span>
+                <span className="font-medium">{totalSubjects} Subjects Available</span>
               </div>
               <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-card border-2">
-                <Star className="h-4 w-4 text-yellow-500 fill-yellow-500" />
+                <Star className="h-4 w-4 text-yellow-500 fill-yellow-500" aria-hidden="true" />
                 <span className="font-medium">New Curriculum</span>
               </div>
             </div>
@@ -202,7 +204,7 @@ export function GradeTextbooksPage({ grade }: { grade: number }) {
                         whileHover={{ scale: 1.1, rotate: 5 }}
                         transition={{ type: "spring", stiffness: 300 }}
                       >
-                        <subject.icon className={`h-12 w-12 ${subject.color}`} />
+                        <subject.icon className={`h-12 w-12 ${subject.color}`} aria-hidden="true" />
                       </motion.div>
                       <div className={`text-xs px-3 py-1 rounded-full bg-gradient-to-r ${subject.gradient} text-white font-medium`}>
                         {subject.chapters} Chapters
@@ -211,7 +213,11 @@ export function GradeTextbooksPage({ grade }: { grade: number }) {
 
                     <h3 className="text-2xl font-bold mb-2">{subject.name}</h3>
                     <p className="text-sm text-muted-foreground mb-4 leading-relaxed line-clamp-2">
-                      {subject.description}
+                      {(() => {
+                        const gradeContent = contents?.[`grade-${grade}` as keyof typeof contents] as Record<string, any> | undefined
+                        const outline = (gradeContent?.[subject.slug]?.['Course-Outline']) as Array<String> ?? [] as Array<string>
+                        return outline && outline.length ? outline.map(a=>a.split(':')[1]).join(', ') : subject.description
+                      })()}
                     </p>
 
                     <div className="flex items-center gap-4 text-sm text-muted-foreground mb-4">
@@ -221,9 +227,9 @@ export function GradeTextbooksPage({ grade }: { grade: number }) {
                     </div>
 
                     <Button asChild className="w-full gap-2 bg-primary hover:bg-primary/90">
-                      <Link href={`/books/grade-${grade}-${subject.slug}`}>
+                      <Link href={`/books/grade-${grade}-${subject.slug}`} aria-label={`Open Grade ${grade} ${subject.name} textbook page`}>
                         View & Download
-                        <ChevronRight className="h-4 w-4" />
+                        <ChevronRight className="h-4 w-4" aria-hidden="true" />
                       </Link>
                     </Button>
                   </CardContent>
@@ -261,7 +267,7 @@ export function GradeTextbooksPage({ grade }: { grade: number }) {
                         whileHover={{ scale: 1.1, rotate: 5 }}
                         transition={{ type: "spring", stiffness: 300 }}
                       >
-                        <subject.icon className={`h-12 w-12 ${subject.color}`} />
+                        <subject.icon className={`h-12 w-12 ${subject.color}`} aria-hidden="true" />
                       </motion.div>
                       <div className={`text-xs px-3 py-1 rounded-full bg-gradient-to-r ${subject.gradient} text-white font-medium`}>
                         {subject.chapters} Chapters
@@ -270,7 +276,11 @@ export function GradeTextbooksPage({ grade }: { grade: number }) {
 
                     <h3 className="text-2xl font-bold mb-2">{subject.name}</h3>
                     <p className="text-sm text-muted-foreground mb-4 leading-relaxed line-clamp-2">
-                      {subject.description}
+                      {(() => {
+                        const gradeContent = contents?.[`grade-${grade}` as keyof typeof contents] as Record<string, any> | undefined
+                        const outline = (gradeContent?.[subject.slug]?.['Course-Outline']) ?? []
+                        return outline && outline.length ? outline.join(', ') : subject.description
+                      })()}
                     </p>
 
                     <div className="flex items-center gap-4 text-sm text-muted-foreground mb-4">
@@ -280,9 +290,9 @@ export function GradeTextbooksPage({ grade }: { grade: number }) {
                     </div>
 
                     <Button asChild className="w-full gap-2 bg-primary hover:bg-primary/90">
-                      <Link href={`/books/grade-${grade}-${subject.slug}`}>
+                      <Link href={`/books/grade-${grade}-${subject.slug}`} aria-label={`Open Grade ${grade} ${subject.name} textbook page`}>
                         View & Download
-                        <ChevronRight className="h-4 w-4" />
+                        <ChevronRight className="h-4 w-4" aria-hidden="true" />
                       </Link>
                     </Button>
                   </CardContent>
@@ -316,8 +326,8 @@ export function GradeTextbooksPage({ grade }: { grade: number }) {
               Download the Exam Galaxy app for thousands of practice questions, mock exams, personalized study plans, and offline access to all textbooks.
             </p>
             <Button size="lg" className="gap-2 bg-primary hover:bg-primary/90" asChild>
-              <a href="https://play.google.com/store/apps/details?id=com.appysinia.exam_galaxy&pcampaignid=web_share" target="_blank" rel="noopener noreferrer">
-                <Download className="h-5 w-5" />
+              <a href="https://play.google.com/store/apps/details?id=com.appysinia.exam_galaxy&pcampaignid=web_share" target="_blank" rel="noopener noreferrer" aria-label="Download Exam Galaxy app on Google Play (opens in new tab)">
+                <Download className="h-5 w-5" aria-hidden="true" />
                 Download Exam Galaxy App
               </a>
             </Button>
@@ -335,8 +345,8 @@ export function GradeTextbooksPage({ grade }: { grade: number }) {
                 <CardContent className="p-4">
                   <Link href={`/grade-${g}-textbooks`} className="flex items-center justify-between group">
                     <div>
-                      <h3 className="font-semibold text-lg">Ethiopian Grade  {g}</h3>
-                      <p className="text-sm text-muted-foreground">13 subjects</p>
+                      <h3 className="font-semibold text-lg">Ethiopian Grade {g}</h3>
+                      <p className="text-sm text-muted-foreground">{totalSubjects} subjects</p>
                     </div>
                     <ChevronRight className="h-5 w-5 text-muted-foreground group-hover:text-primary transition-colors" />
                   </Link>

@@ -19,7 +19,7 @@ export function Header() {
         {/* Logo */}
         <Link href="https://books.examgalaxy.com/" className="flex items-center gap-2">
           <Image alt='exam galaxy' src={'/exam-galaxy-icon.jpg'} width={40} height={40} className='rounded-lg'/>
-          <span className="hidden font-display font-bold text-foreground sm:inline">Exam Galaxy</span>
+          <span className="font-display font-bold text-foreground sm:inline">Exam Galaxy</span>
         </Link>
 
         {/* Desktop Navigation */}
@@ -65,7 +65,7 @@ export function Header() {
             href="https://play.google.com/store/apps/details?id=com.appysinia.exam_galaxy&pcampaignid=web_share"
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden sm:inline-flex items-center gap-2 rounded-lg bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:bg-primary/90 transition"
+            className="sm:inline-flex items-center gap-2 rounded-lg bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:bg-primary/90 transition"
           >
             Download App
           </a>
