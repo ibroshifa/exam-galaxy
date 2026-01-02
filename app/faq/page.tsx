@@ -10,12 +10,12 @@ import { AdBanner } from "@/components/ad-banner"
 
 const FAQs = [
   {
-    question: `Where can i get past entrance exam papers?`,
+    question: `Where can I get past entrance exam papers?`,
     answer:
       `You can find past entrance exams with answer and explanation in exam galaxy app which you can find in our website. The app contains question banks from 2007-2017 with detailed solutions.`,
   },
   {
-    question: `Where can i download grade 12 books pdf?`,
+    question: `Where can I download grade 12 books PDF?`,
     answer:
       `You can download all grade 12 books inside examgalaxy website under books section. All textbooks are available for free in PDF format for offline access.`,
   },

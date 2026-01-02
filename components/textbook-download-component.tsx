@@ -1,6 +1,6 @@
-import { Download, BookOpen, Target } from 'lucide-react'
+import { Download, BookOpen, Target, Book } from 'lucide-react'
 import { AdBanner } from './ad-banner'
-import { FramerAnimation1,} from './minorcomponents/animation'
+import { FramerAnimation1 } from './minorcomponents/animation'
 import data from '../app/contents.json'
 import { Footer } from './footer';
 import Script from 'next/script';
@@ -15,7 +15,7 @@ interface TextbookDownloadComponentProps {
 }
 
 const a = {
-  question: `Where can past entrance exams?`,
+  question: `Where can I find past entrance exams?`,
   answer:
   `You can find exam galaxy questions and practice tests in our app to help you prepare for the Entrance Exam.`,
 }
@@ -25,21 +25,27 @@ export function TextbookDownloadComponent({
   title,
   description,
 }: TextbookDownloadComponentProps) {
-  
-  if (subject.split(' ')[0]=='Mathematics') {
-    subject='math'
-  }else if (subject.split(' ')[0]=='English') {
-    subject='english'
-  }else(
-    subject = subject.split(' ')[0]
-  )
-  const units = data[`grade-${grade}`][subject.toLocaleLowerCase() as 'physics' | 'biology' | 'chemistry' | 'english' | 'history' | 'geography' | 'economics' | 'math']['Course-Outline']
+  // Normalize subject key (do not mutate prop)
+  const rawSubjectWord = subject.split(' ')[0]
+  const normalizedSubjectKey = rawSubjectWord === 'Mathematics' ? 'math' : rawSubjectWord === 'English' ? 'english' : rawSubjectWord.toLowerCase()
+  const subjectDisplay = rawSubjectWord.charAt(0).toUpperCase() + rawSubjectWord.slice(1).toLowerCase()
+
+  const gradeKey = `grade-${grade}` as keyof typeof data
+  const subjectKey = normalizedSubjectKey as keyof (typeof data)[typeof gradeKey]
+
+  // Safe access to data to avoid crashes when content is missing
+  const subjectData = data[gradeKey][subjectKey]
+  const units = subjectData?.['Course-Outline'] ?? []
+
+  // Build a safe topics preview for the FAQ (non-mutating)
+  const topicParts = units.map((u:any) => (u && u.includes(':') ? u.split(':')[1] : u || ''))
+  const topicsPreview = topicParts.length > 1 ? `${topicParts.slice(0, -1).join(', ')} and ${topicParts[topicParts.length - 1]}` : (topicParts[0] ?? '')
 
   const grade9BiologyFAQ = [
   {
-    question: `What topics are covered in the Ethiopis Ethiopian Grade  ${grade} ${subject} textbook?`,
+    question: `What topics are covered in the Ethiopian Grade ${grade} ${subjectDisplay} textbook?`,
     answer:
-      `The Ethiopian Grade  ${grade} ${subject} textbook covers topics such as ${units.map(unit=>unit.split(':')[1]).splice(0,units.length-1).join()} and ${units[units.length-1].split(':')[1]}`,
+      `The Ethiopian Grade ${grade} ${subjectDisplay} textbook covers topics such as ${topicsPreview}`,
   },
   {
     question: `How can I download the Ethiopian Grade  ${grade} ${subject} textbook PDF?`,
@@ -47,7 +53,7 @@ export function TextbookDownloadComponent({
       `You can download the Ethiopian Grade  ${grade} ${subject} textbook PDF for free from our website by clicking the download link provided on the page.`,
   },
   {
-    question: `Where can i get past entrance exams for Ethiopian Grade  ${grade} ${subject}?`,
+    question: `Where can I get past entrance exams for Ethiopian Grade ${grade} ${subject}?`,
     answer:
       `You can find past entrance questions and practice tests in our EXAM GALAXY app to help you prepare for the entrance exam.`,
   }
@@ -72,10 +78,10 @@ const faqschema = generateFAQSchema(grade9BiologyFAQ)
             <a href="/" className="hover:text-foreground transition">Home</a>
             <span>/</span>
             <a href={`/grade-${grade}-textbooks`} className="hover:text-foreground transition">
-              Grade  {grade}
+              Grade {grade}
             </a>
             <span>/</span>
-            <span className="text-foreground">{subject}</span>
+            <span className="text-foreground">{subjectDisplay}</span>
           </nav>
         </div>
       </div>
@@ -91,13 +97,14 @@ const faqschema = generateFAQSchema(grade9BiologyFAQ)
         {/* Header */}
 
         {/* Quick Download Button */}
-        <div className='mt-5'>
+          <div className='mt-5'>
           <a
             href="#download"
+            aria-label={`Jump to download section for Grade ${grade} ${subjectDisplay} textbook`}
             className="inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3 font-semibold text-primary-foreground hover:bg-primary/90 transition"
           >
             <Download className="h-5 w-5" />
-            Download PDF Now
+            Jump to Download
           </a>
 
         </div>
@@ -113,20 +120,21 @@ const faqschema = generateFAQSchema(grade9BiologyFAQ)
           <div className="mt-4">
             <h2 className="text-2xl font-bold text-foreground mb-4">Table of Contents</h2>
             <div className="rounded-lg border border-border bg-card p-6">
-              <ul className="space-y-2 text-foreground">
-                {units.map((item,index)=>(
-                  <li key={index}>
-                    <span className="text-primary">•  </span>
-                      {item}
-                  </li>
-                ))}
-              </ul>
+              {units.length > 0 ? (
+                <ul role="list" aria-label="Table of contents" className="space-y-2 text-foreground">
+                {units.map((item:any, index:number) => (
+                      <li key={index}>
+                        <span className="text-primary">• </span>
+                        {item}
+                      </li>
+                    ))}
+                </ul>):<></>}
+              </div>
             </div>
-          </div>
-
-          {/* Book Summary Card */}
-          <div>
-            <h2 className="font-display text-2xl font-bold text-foreground mb-4 mt-4">Book Summary</h2>
+  
+            {/* Book Summary */}
+            <div className="mt-8">
+              <h2 className="font-display text-2xl font-bold text-foreground mb-4">Book Summary</h2>
             {
               (() => {
                 const subjectKey = subject.toLocaleLowerCase()
@@ -165,7 +173,7 @@ const faqschema = generateFAQSchema(grade9BiologyFAQ)
                       </div>
                       <div className="space-y-2">
                         <div className="text-sm text-muted-foreground">Curriculum</div>
-                        <div className="font-semibold text-foreground">New for all</div>
+                        <div className="font-semibold text-foreground">Aligned with national curriculum</div>
                       </div>
                       <div className="space-y-2">
                         <div className="text-sm text-muted-foreground">Total Units</div>
@@ -235,18 +243,52 @@ const faqschema = generateFAQSchema(grade9BiologyFAQ)
           <div>
 
           <h2 className="font-display text-2xl font-bold text-foreground mb-4">Download Your Textbook</h2>
-          <div className="flex flex-col sm:flex-row gap-4">
-            <a
-              href={data[`grade-${grade}`][subject.toLocaleLowerCase() as 'physics' | 'biology' | 'chemistry' | 'english' | 'history' | 'geography' | 'economics' | 'math']['book_URL']}
-              className="flex-1 rounded-lg bg-primary px-6 py-3 font-semibold text-primary-foreground hover:bg-primary/90 transition text-center"
-              >
-              Download PDF
-            </a>
+            <div className="flex flex-col sm:flex-row gap-4">
+            {(() => {
+              const downloadUrl = subjectData?.book_URL
+              // compute estimated file size text
+              const subjectKeyForPages = subjectKey
+              const pagesLookup: Record<string, number> = {
+                physics: 320,
+                chemistry: 350,
+                biology: 380,
+                math: 420,
+                english: 280,
+                history: 360,
+                geography: 300,
+                economics: 290,
+              }
+              const estimatedPages = pagesLookup[subjectKeyForPages]
+              const fileSizeMB = estimatedPages ? Math.max(0.1, Math.round((estimatedPages * 0.05) * 10) / 10) : undefined
+
+              if (!downloadUrl) {
+                return (
+                  <div className="flex-1">
+                    <button aria-disabled className="w-full rounded-lg bg-muted/20 px-6 py-3 font-semibold text-muted-foreground cursor-not-allowed" aria-label={`Download not available for Grade ${grade} ${subjectDisplay}`}>
+                      Download not available
+                    </button>
+                  </div>
+                )
+              }
+
+              return (
+                <a
+                  href={downloadUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 rounded-lg bg-primary px-6 py-3 font-semibold text-primary-foreground hover:bg-primary/90 transition text-center"
+                  aria-label={`Download Grade ${grade} ${subjectDisplay} textbook PDF${fileSizeMB ? `, approximately ${fileSizeMB} MB` : ''}`}
+                >
+                  Download PDF{fileSizeMB ? ` — ${fileSizeMB} MB` : ''}
+                </a>
+              )
+            })()}
             <a
               href="https://play.google.com/store/apps/details?id=com.appysinia.exam_galaxy&pcampaignid=web_share"
               target="_blank"
               rel="noopener noreferrer"
               className="flex-1 rounded-lg border border-primary px-6 py-3 font-semibold text-primary hover:bg-primary/5 transition text-center"
+              aria-label="Open Exam Galaxy on Google Play in a new tab"
             >
               Get Exam Galaxy App
             </a>
