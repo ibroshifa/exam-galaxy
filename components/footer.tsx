@@ -105,14 +105,14 @@ export function Footer() {
                 <Instagram className="h-5 w-5" />
                 <span className="sr-only">Instagram</span>
               </a>
-              <a href="mailto:contact@exam-galaxy.com" className="text-muted-foreground hover:text-emerald-600 transition-colors">
+              <a href="mailto:ibroshifa@gmail.com" className="text-muted-foreground hover:text-emerald-600 transition-colors">
                 <Mail className="h-5 w-5" />
                 <span className="sr-only">Email</span>
               </a>
             </div>
             <p className="text-sm text-muted-foreground">
-              <a href="mailto:contact@exam-galaxy.com" className="hover:text-emerald-600">
-                contact@exam-galaxy.com
+              <a href="mailto:ibroshifa@gmail.com" className="hover:text-emerald-600">
+                ibroshifa@gmail.com
               </a>
             </p>
           </div>

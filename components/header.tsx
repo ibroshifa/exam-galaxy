@@ -53,7 +53,7 @@ export function Header() {
             Features
           </Link>
 
-          <a href="#" className="text-sm font-medium text-foreground hover:text-primary transition">
+          <a href="/about" className="text-sm font-medium text-foreground hover:text-primary transition">
             About
           </a>
         </div>
@@ -138,7 +138,7 @@ export function Header() {
               Features
             </Link>
             <a
-              href="#"
+              href="/about"
               className="block text-sm font-medium text-foreground hover:text-primary"
               onClick={() => setIsOpen(false)}
             >
