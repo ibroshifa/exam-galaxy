@@ -2,13 +2,12 @@
 
 import { motion } from 'framer-motion'
 import { BookOpen, Clock, Filter, Zap, BarChart3, Smartphone } from 'lucide-react'
-import { Card, CardContent } from '@/components/ui/card'
 
 const features = [
   {
     icon: BookOpen,
     title: 'Comprehensive Exam Resources',
-    description: '2000+ past exam questions from 2000-2017 EC entrance exams and 2003-2008 Ethiopian Grade 10 matric questions with complete answers and detailed explanations',
+    description: '2000+ past exam questions from 2007-2017 entrance exams with complete answers and detailed explanations',
     color: 'text-emerald-600',
   },
   {
@@ -83,30 +82,48 @@ export function AppFeaturesSection() {
           </p>
         </motion.div>
 
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {features.map((feature, index) => (
-            <motion.div
-              key={feature.title}
-              initial={{ opacity: 1, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-            >
-              <Card className="h-full border-2 hover:border-primary/20 transition-all hover:shadow-lg dark:hover:border-primary/30">
-                <CardContent className="p-6">
-                  <motion.div
-                    whileHover={{ scale: 1.1, rotate: 5 }}
-                    transition={{ type: "spring", stiffness: 300 }}
-                  >
-                    <feature.icon className={`h-12 w-12 mb-4 ${feature.color}`} />
-                  </motion.div>
-                  <h4 className="text-lg font-semibold mb-2">{feature.title}</h4>
-                  <p className="text-muted-foreground leading-relaxed text-sm">{feature.description}</p>
-                </CardContent>
-              </Card>
-            </motion.div>
-          ))}
-        </div>
+        <motion.div
+          initial={{ opacity: 1, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="py-8"
+        >
+          <div className="relative max-w-3xl mx-auto">
+            <div className="space-y-8">
+              {features.map((feature, index) => (
+                <motion.div
+                  key={feature.title}
+                  initial={{ opacity: 1, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.45, delay: index * 0.06 }}
+                  className="relative pl-16"
+                >
+                  {/* left connector: two segments (top and bottom) leaving a gap at the bullet */}
+                  <div className="absolute" style={{ left: 20, top: 0, height: 'calc(50% - 12px)' }}>
+                    <div className="w-px bg-muted-foreground/10 h-full " />
+                  </div>
+                  <div className="absolute" style={{ left: 20, bottom: 0, height: 'calc(50% - 12px)' }}>
+                    <div className="w-px bg-muted-foreground/10 h-full" />
+                  </div>
+                  <div className="absolute" style={{ left: 20, bottom: 0, height: 'calc(50% - 12px)' }}>
+                    <div className="w-px bg-green-600/50 h-full" />
+                  </div>
+                  <div className="absolute left-0 top-0">
+                    <div className="w-10 h-10 rounded-full bg-background border-2 border-muted-foreground/10 flex items-center justify-center">
+                      <feature.icon className={`h-5 w-5 ${feature.color}`} />
+                    </div>
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-semibold mb-1">{feature.title}</h4>
+                    <p className="text-muted-foreground leading-relaxed text-sm">{feature.description}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </motion.div>
       </div>
     </section>
   )

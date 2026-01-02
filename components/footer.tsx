@@ -15,7 +15,7 @@ export function Footer() {
               <span className="text-xl font-bold">Exam Galaxy</span>
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Ethiopian University Entrance Exam (EuEE) preparation app with 1000+ past questions (2007-2017). Free textbooks for grades 9-12 available on our website.
+              Ethiopian University Entrance Exam (EuEE) preparation app with 2000+ past questions (2007-2017). Free textbooks for grades 9-12 available on our website.
             </p>
           </div>
 

@@ -99,7 +99,7 @@ export function HeroSection() {
             >
               <div className="flex items-center gap-2">
                 <div className="h-2 w-2 rounded-full bg-emerald-500" />
-                <span>1000+ Questions</span>
+                <span>2000+ Questions</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="h-2 w-2 rounded-full bg-yellow-500" />

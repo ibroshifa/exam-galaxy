@@ -43,8 +43,8 @@ export function CTASection() {
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">
             Start Your EUEE Preparation with Exam Galaxy
           </h2>
-          <p className="text-xl text-emerald-50 mb-8 leading-relaxed max-w-2xl mx-auto">
-            Download the Exam Galaxy app to access 1000+ past exam questions from 2007-2017. Practice with real EUEE questions and download free textbooks from this website.
+            <p className="text-xl text-emerald-50 mb-8 leading-relaxed max-w-2xl mx-auto">
+            Download the Exam Galaxy app to access 2000+ past exam questions from 2007-2017. Practice with real EUEE questions and download free textbooks from this website.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
