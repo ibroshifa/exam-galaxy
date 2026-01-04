@@ -30,6 +30,9 @@ function page() {
         __html:JSON.stringify(faqschema)
       }}
     />
+    <head>
+      <meta content='noindex'/>
+    </head>
       <div>
        <h1> page</h1>
           {data['grade-9'].history['Course-Outline'].map((item,index)=>{
