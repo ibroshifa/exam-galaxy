@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "destination": "http://books.examgalaxy.com/$1",
+      "permanent": true
+    }
+  ]
+}

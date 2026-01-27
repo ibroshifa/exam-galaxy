@@ -9,6 +9,7 @@ import { AdBanner } from '@/components/ad-banner'
 import Script from 'next/script'
 import { generateFAQSchema } from '@/lib/faqSchema'
 import { Testimonials } from '@/components/testimonials'
+import { headers } from 'next/headers'
 
 export const metadata: Metadata = {
   title: 'Exam Galaxy - Official Website | Ethiopian University Entrance Exam Questions & Free Textbooks',
@@ -21,7 +22,7 @@ export const metadata: Metadata = {
     locale: 'en_US',
   },
   alternates: {
-    canonical: '/',
+    canonical: 'http://books.examgalaxy.com/',
   },
 }
 const FAQs = [
@@ -48,7 +49,10 @@ const FAQs = [
   
 ]
 const faqschema = generateFAQSchema(FAQs)
-export default function HomePage() {
+export default async function HomePage() {
+  const headerlist = await headers()
+  const host = headerlist.get('host')
+  console.log(host)
   return (
     <main className="min-h-screen bg-background">
       <Script
