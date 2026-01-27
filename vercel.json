@@ -2,7 +2,13 @@
   "redirects": [
     {
       "source": "/(.*)",
-      "destination": "http://books.examgalaxy.com/$1",
+      "has": [
+        {
+          "type": "host",
+          "value": "exam-galaxy.vercel.app"
+        }
+      ],
+      "destination": "https://books.examgalaxy.com/$1",
       "permanent": true
     }
   ]
