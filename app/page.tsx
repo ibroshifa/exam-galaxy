@@ -50,9 +50,6 @@ const FAQs = [
 ]
 const faqschema = generateFAQSchema(FAQs)
 export default async function HomePage() {
-  const headerlist = await headers()
-  const host = headerlist.get('host')
-  console.log(host)
   return (
     <main className="min-h-screen bg-background">
       <Script
