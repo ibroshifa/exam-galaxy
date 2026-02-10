@@ -6,5 +6,4 @@ Allow: /
 Host: https://books.examgalaxy.com/
 
 # Sitemaps
-Sitemap: https://books.examgalaxy.com/sitemap.xml
-Sitemap: https://books.examgalaxy.com/site.txt
+Sitemap: https://books.examgalaxy.com/newsitemap.xml
