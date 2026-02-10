@@ -14,7 +14,7 @@ const nextConfig = {
         has: [
           { type: 'host', value: 'exam-galaxy.vercel.app/' }
         ],
-        destination: 'http://books.examgalaxy.com/:path*',
+        destination: 'https://books.examgalaxy.com/:path*',
         permanent: true,
       },
     ]
